@@ -1,0 +1,2323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SetTTranLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dteLOGDATE" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="strLOGINID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLOGINNAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTERMINALID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPROGRAMID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strACTION" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDESCRIPTION" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetTTranLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetTTranLogResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKensuInfoKikaku">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKensuInfoKikakuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetKensuInfoKikakuResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKensuInfoEigyo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDeptCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKensuInfoEigyoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetKensuInfoEigyoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCheckKbn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strShipPlace" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMasterFlg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dteDateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dteDateTo" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="strValidDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetItemListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMItem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMItem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetItemResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMItem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMItem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMItem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMItem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateItemResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMItem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMItem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileInsertItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dsItem" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMItem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMItem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileInsertItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FileInsertItemResult" type="xs:int" />
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileInsertSPPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dsSprice" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMSPPrice" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMSPPrice.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileInsertSPPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FileInsertSPPriceResult" type="xs:int" />
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileUpdatePriceItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dsItem" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMItem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMItem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileUpdatePriceItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FileUpdatePriceItemResult" type="xs:int" />
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileUpdatePriceSPPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dsSprice" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMSPPrice" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMSPPrice.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileUpdatePriceSPPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FileUpdatePriceSPPriceResult" type="xs:int" />
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileUpdateValDateItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dsItem" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMItem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMItem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileUpdateValDateItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FileUpdateValDateItemResult" type="xs:int" />
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderItemList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderItemListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOrderItemListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMOrderItem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMOrderItem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOrderItemResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMOrderItem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMOrderItem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMOrderItem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMOrderItem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOrderItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateOrderItemResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMOrderItem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMOrderItem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckOrderItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckOrderItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckOrderItemResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSPPriceList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHattyuCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSPPriceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSPPriceListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMSPPrice" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMSPPrice.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTokuisakiName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTokuisakiNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTokuisakiNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSPPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMSPPrice" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMSPPrice.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSPPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSPPriceResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMSPPrice" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMSPPrice.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeptDennoList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDeptCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeptDennoListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDeptDennoListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMDeptDenno" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMDeptDenno.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeptDenno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDeptCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeptDennoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDeptDennoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMDeptDenno" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMDeptDenno.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckDeptDenno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDeptCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckDeptDennoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckDeptDennoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDeptDenno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMDeptDenno" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMDeptDenno.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDeptDennoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateDeptDennoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMDeptDenno" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMDeptDenno.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEndUserCnvList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHattyuCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEndCnvCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEndUserCnvListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEndUserCnvListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMEndUserCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMEndUserCnv.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEndUserCnv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMEndUserCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMEndUserCnv.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEndUserCnvResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateEndUserCnvResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMEndUserCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMEndUserCnv.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEndUserCnv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strHattyuCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEndCnvCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEndUserCnvResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEndUserCnvResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMEndUserCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMEndUserCnv.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNijiSyosyaCnvList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHattyuCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strNijiCnvCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNijiSyosyaCnvListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNijiSyosyaCnvListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMNijiSyosyaCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMNijiSyosyaCnv.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNijiSyosyaCnv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strHattyuCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strNijiCnvCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNijiSyosyaCnvResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNijiSyosyaCnvResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMNijiSyosyaCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMNijiSyosyaCnv.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNijiSyosya">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMNijiSyosyaCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMNijiSyosyaCnv.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNijiSyosyaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateNijiSyosyaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMNijiSyosyaCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMNijiSyosyaCnv.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTokuisakiCnvList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHattyuCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokCnvCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTokuisakiCnvListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTokuisakiCnvListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMTokuisakiCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMTokuisakiCnv.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTokuisakiCnv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strHattyuCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokCnvCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTokuisakiCnvResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTokuisakiCnvResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMTokuisakiCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMTokuisakiCnv.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTokuisakiCnv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMTokuisakiCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMTokuisakiCnv.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTokuisakiCnvResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateTokuisakiCnvResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMTokuisakiCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMTokuisakiCnv.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMKisyuList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMKisyu" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMKisyuListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMKisyuListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMMKisyu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMMKisyu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMKisyu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMKisyu" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMKisyuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMKisyuResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMMKisyu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMMKisyu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMKisyu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMMKisyu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMMKisyu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMKisyuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateMKisyuResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMMKisyu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMMKisyu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystem">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSystemResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMSystem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMSystem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTansyukuList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDeptCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTansyukuType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTansyukuCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTansyukuListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTansyukuListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMTansyuku" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMTansyuku.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTansyuku">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDeptCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTansyukuType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTansyukuCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTansyukuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTansyukuResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMTansyuku" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMTansyuku.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTansyuku">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMTansyuku" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMTansyuku.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTansyukuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateTansyukuResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMTansyuku" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMTansyuku.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTansyukuSelect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDeptCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTansyukuType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTansyukuSelectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTansyukuSelectResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMTansyuku" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMTansyuku.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMinTansyukuCod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDeptCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTansyukuType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMinTansyukuCodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMinTansyukuCodResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSYSTEM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMSystem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMSystem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSYSTEMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSYSTEMResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMSystem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMSystem.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBATCHLOGList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dteDateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dteDateTo" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBATCHLOGListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBATCHLOGListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTBatchLog" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTBatchLog.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKatabanInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCheckKbn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKatabanInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetKatabanInfoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCHUMONList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dteDateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dteDateTo" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="strHattyuCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCHUMONListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCHUMONListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTChumon" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTChumon.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChumon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strEDINo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChumonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetChumonResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTChumon" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTChumon.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckChumon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strEDINo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckChumonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckChumonResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJuchuList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intSyori" type="xs:int" />
+        <xs:element minOccurs="0" name="dteDateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dteDateTo" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="strOtherFlg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDeptCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTantoCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAssistCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOnlyErrFlg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHatCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJuchuListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetJuchuListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJuchu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intSyori" type="xs:int" />
+        <xs:element minOccurs="0" name="strEDINo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJuchuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetJuchuResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJuchu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJuchuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateJuchuResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJuchuKakutei">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="dsDenno" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMDeptDenno" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMDeptDenno.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJuchuKakuteiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateJuchuKakuteiResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JuchuTorikeshi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEDINO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLoginId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JuchuTorikeshiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJuchuResultList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dteDateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dteDateTo" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="strErrorFlg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDeptCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTantoCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAssistCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLoginId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPrintFlg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHatCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJuchuResultListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetJuchuResultListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJuchu_PrintFlg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strLoginId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJuchu_PrintFlgResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateJuchu_PrintFlgResult" type="xs:int" />
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckJuchu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="dsChumon" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTChumon" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTChumon.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckJuchuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckJuchuResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckJuchuInputData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu.T_JUCHUDataTable" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DSTJuchu.xsd" name="namespace" />
+            <xs:attribute fixed="T_JUCHUDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckJuchuInputDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu.T_JUCHUDataTable" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DSTJuchu.xsd" name="namespace" />
+            <xs:attribute fixed="T_JUCHUDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckJuchuXmlData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu.T_JUCHUDataTable" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DSTJuchu.xsd" name="namespace" />
+            <xs:attribute fixed="T_JUCHUDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckJuchuXmlDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dt" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu.T_JUCHUDataTable" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DSTJuchu.xsd" name="namespace" />
+            <xs:attribute fixed="T_JUCHUDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKikanList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dteDateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dteDateTo" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="strKUBKbn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDeptCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strReSendFlg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSendKbn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEDINo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHatCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTantoCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDataKind" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strErrorCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKikanListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetKikanListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTKikan" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTKikan.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKikan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSeqNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSendKbn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKikanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetKikanResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTKikan" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTKikan.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateKikan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTKikan" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTKikan.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateKikanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateKikanResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTKikan" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTKikan.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKensakuJokenList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLoginId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBunrui" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKensakuJokenListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetKensakuJokenListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMKensakuJoken" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMKensakuJoken.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateKensakuJoken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strDelKbn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLoginId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strJokenName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBunrui" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strjoken1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strjoken2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strjoken3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strjoken4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strjoken5" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strjoken6" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strjoken7" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strjoken8" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strjoken9" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strjoken10" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateKensakuJokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateKensakuJokenResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckG2ShipPlace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strShipPlace" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckG2ShipPlaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckG2ShipPlaceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetG2ShipPlaceCodList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetG2ShipPlaceCodListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetG2ShipPlaceCodListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckG2Tokuisaki">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTokCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckG2TokuisakiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckG2TokuisakiResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetG2TokuisakiName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTokCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetG2TokuisakiNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetG2TokuisakiNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckP3WebCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strCustomer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckP3WebCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckP3WebCustomerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetP3WebCustomerName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strCustomer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetP3WebCustomerNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetP3WebCustomerNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeptDennoPW">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLoginID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeptDennoPWResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDeptDennoPWResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMDeptDenno" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMDeptDenno.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertKatahikiItem1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strRegistKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCheckKbn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intListPrice" type="xs:int" />
+        <xs:element minOccurs="0" name="intRegistPrice" type="xs:int" />
+        <xs:element minOccurs="0" name="intSSPrice" type="xs:int" />
+        <xs:element minOccurs="0" name="intBSPrice" type="xs:int" />
+        <xs:element minOccurs="0" name="intGSPrice" type="xs:int" />
+        <xs:element minOccurs="0" name="intPSPrice" type="xs:int" />
+        <xs:element minOccurs="0" name="strShipPlace" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUpdateID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intStrNouki" type="xs:int" />
+        <xs:element minOccurs="0" name="intTekiyouKosuu" type="xs:int" />
+        <xs:element minOccurs="0" name="strZaikoFlg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSimpleOrderFlg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertKatahikiItem1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertKatahikiItem1Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertKatahikiItem2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strRegistKey" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCheckKbn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intListPrice" type="xs:int" />
+        <xs:element minOccurs="0" name="intRegistPrice" type="xs:int" />
+        <xs:element minOccurs="0" name="intSSPrice" type="xs:int" />
+        <xs:element minOccurs="0" name="intBSPrice" type="xs:int" />
+        <xs:element minOccurs="0" name="intGSPrice" type="xs:int" />
+        <xs:element minOccurs="0" name="intPSPrice" type="xs:int" />
+        <xs:element minOccurs="0" name="strShipPlace" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUpdateID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intStrNouki" type="xs:int" />
+        <xs:element minOccurs="0" name="intTekiyouKosuu" type="xs:int" />
+        <xs:element minOccurs="0" name="strZaikoFlg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSimpleOrderFlg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSetUnit" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPriceUnit" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCylinderMsgFlg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertKatahikiItem2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertKatahikiItem2Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKatahikiItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strRegistKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetKatahikiItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetKatahikiItemResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSMKATAHIKI" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSMKATAHIKI.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJuchuRirekiList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dstJuchu" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJuchuRirekiListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetJuchuRirekiListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchuRirekiList" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchuRirekiList.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSelectCatalog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSelectCatalogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSelectCatalogResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Encode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strPlainText" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EncodeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Decode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strCipherText" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DecodeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCHUMONCntList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCHUMONCntListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCHUMONCntListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DstChumonCnt.DT_CHUMON_CNT_LISTDataTable" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DstChumonCnt.xsd" name="namespace" />
+            <xs:attribute fixed="DT_CHUMON_CNT_LISTDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOldCHUMONList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dteDateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dteDateTo" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="strHattyuCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOldCHUMONListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOldCHUMONListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTChumon" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTChumon.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOldChumon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strEDINo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOldChumonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOldChumonResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTChumon" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTChumon.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOldJuchuResultList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dteDateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dteDateTo" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="strErrorFlg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokuisakiCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDeptCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTantoCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOrderNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAssistCod" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLoginId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPrintFlg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHatCod" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOldJuchuResultListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOldJuchuResultListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOldJuchu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intSyori" type="xs:int" />
+        <xs:element minOccurs="0" name="strEDINo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOldJuchuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOldJuchuResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSenkoInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSenkoInfoNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPublisher" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokuisakiCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTokuisakiName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSetMaker" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEigyoshoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strApplyFrom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strApplyTo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSenkoInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSenkoInfoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DSTSenko" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DSTSenko.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestWCF">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestWCFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TestWCFResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

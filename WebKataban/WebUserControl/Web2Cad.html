@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CKD configurator (CKD)</title>
+</head>
+<body>
+    CKD configurator (CKD)<br>
+    <form id="cadenasform" name="cadenasform" method="POST" action="http://service.web2cad.co.jp/maker/ckd_assy/call_assy.php">
+        <!-- the JSON string must be URL-encoded -->
+        <input type="text" id="json" name="json" size="200" value=""><br>
+        <input type="submit" value="submit json data">
+    </form>
+    <Script language="javascript" type="text/javascript">
+        var parameters = location.search.substring(1);
+        var language = parameters.split('&')[0].replace('language=', '');
+        var jsonData = parameters.split('&')[1].replace('jsondata=', '');
+
+        document.getElementById('json').value = jsonData;
+        document.cadenasform.action += '?language=' + language;
+        document.cadenasform.submit();
+    </Script>
+</body>
+</html>

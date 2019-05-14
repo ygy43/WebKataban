@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element ref="xs:schema" />
+        <xs:any />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMItem" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMItem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSMItem.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMSPPrice" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMSPPrice" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSMSPPrice.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMOrderItem" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMOrderItem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSMOrderItem.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMDeptDenno" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMDeptDenno" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSMDeptDenno.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMEndUserCnv" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMEndUserCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSMEndUserCnv.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMNijiSyosyaCnv" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMNijiSyosyaCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSMNijiSyosyaCnv.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMTokuisakiCnv" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMTokuisakiCnv" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSMTokuisakiCnv.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMMKisyu" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMMKisyu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSMMKisyu.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMSystem" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMSystem" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSMSystem.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMTansyuku" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMTansyuku" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSMTansyuku.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSTBatchLog" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSTBatchLog" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSTBatchLog.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSTChumon" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSTChumon" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSTChumon.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSTJuchu" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSTJuchu" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSTJuchu.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSTKikan" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSTKikan" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSTKikan.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMKensakuJoken" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMKensakuJoken" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSMKensakuJoken.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSMKATAHIKI" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSMKATAHIKI" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSMKATAHIKI.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSTJuchuRirekiList" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSTJuchuRirekiList" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSTJuchuRirekiList.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DSTSenko" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DSTSenko" Namespace="http://schemas.datacontract.org/2004/07/CKD" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSTSenko.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

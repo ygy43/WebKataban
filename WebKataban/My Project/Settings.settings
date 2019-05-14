@@ -1,0 +1,111 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="LoginCheck" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Encrypted" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UrlEncoded" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="EdiReturn" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="EdiUrlEncoded" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FileOutputFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\WebKatabanLog\SBO\</Value>
+    </Setting>
+    <Setting Name="DownLoadFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Kakaku.txt</Value>
+    </Setting>
+    <Setting Name="ExcelDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\WebKatabanLog\ISO_仕様書\WEB\</Value>
+    </Setting>
+    <Setting Name="ExcelTemplate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Template\</Value>
+    </Setting>
+    <Setting Name="ExcelUserDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UserDir\</Value>
+    </Setting>
+    <Setting Name="ExcelUserFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Manifold.xls</Value>
+    </Setting>
+    <Setting Name="FileOutputDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\ygy86\Documents\システム開発\WEB形引10-12\新規資料\テスト仕様書\Jsonファイルテスト\新システムJSONファイル\</Value>
+    </Setting>
+    <Setting Name="FileOutputName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">kataban.csv</Value>
+    </Setting>
+    <Setting Name="LogFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Log.txt</Value>
+    </Setting>
+    <Setting Name="intMaxCount" Type="System.Int64" Scope="Application">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="ManifoldTestStart" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="LogFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\WebKatabanLog\Log_Net\</Value>
+    </Setting>
+    <Setting Name="WebKataban_WSKatahikirenkei_WSKatahikiRenkei" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/wskatahikirenkei/Service.asmx</Value>
+    </Setting>
+    <Setting Name="MaxDispTnkCnt" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="ExcelOutputPathForTest" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\idh303\Desktop\</Value>
+    </Setting>
+    <Setting Name="ManifoldTestEnd" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1520</Value>
+    </Setting>
+    <Setting Name="WebKataban_weblogin_LoginCheck" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www21.ckd.co.jp/weblogin_test/logincheck.asmx</Value>
+    </Setting>
+    <Setting Name="IsShowFooter" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ShiireSearchMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="WebKataban_WcfKatahikiRenkei_KatahikiRenkeiService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sv413/WcfKatahikiRenkei/KatahikiRenkeiService.svc</Value>
+    </Setting>
+    <Setting Name="connkhdb" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=nkcs\sqlexpress;Initial Catalog=khdbCad;Persist Security Info=True;User ID=ckdsales;Password=ckd&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=nkcs\sqlexpress;Initial Catalog=khdbCad;Persist Security Info=True;User ID=ckdsales;Password=ckd</Value>
+    </Setting>
+    <Setting Name="connkhBase" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=nkcs\sqlexpress;Initial Catalog=khBaseCad;Persist Security Info=True;User ID=ckdsales;Password=ckd&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=nkcs\sqlexpress;Initial Catalog=khBaseCad;Persist Security Info=True;User ID=ckdsales;Password=ckd</Value>
+    </Setting>
+    <Setting Name="connkhLog" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=nkcs\sqlexpress;Initial Catalog=khLogCad;Persist Security Info=True;User ID=ckdsales;Password=ckd&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=nkcs\sqlexpress;Initial Catalog=khLogCad;Persist Security Info=True;User ID=ckdsales;Password=ckd</Value>
+    </Setting>
+    <Setting Name="AnonymousUserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DEFUSER</Value>
+    </Setting>
+    <Setting Name="AnonymousPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">system</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

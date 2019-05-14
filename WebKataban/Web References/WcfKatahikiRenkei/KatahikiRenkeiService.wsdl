@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="KatahikiRenkeiService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://sv413/WcfKatahikiRenkei/KatahikiRenkeiService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://sv413/WcfKatahikiRenkei/KatahikiRenkeiService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://sv413/WcfKatahikiRenkei/KatahikiRenkeiService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfKatahikiRenkei.Results" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IKatahikiRenkeiService_GetStandardNoki_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStandardNoki" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetStandardNoki_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStandardNokiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetElKubun_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetElKubun" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetElKubun_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetElKubunResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetElFlag_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetElFlag" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetElFlag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetElFlagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetQuantityUnit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuantityUnit" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetQuantityUnit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuantityUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetNetPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetPrice" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetNetPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetSwitchFlg_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSwitchFlg" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetSwitchFlg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSwitchFlgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetSelectCatalog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectCatalog" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetSelectCatalog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectCatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_IsGlc_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsGlc" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_IsGlc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsGlcResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetMItemByLanguage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMItemByLanguage" />
+  </wsdl:message>
+  <wsdl:message name="IKatahikiRenkeiService_GetMItemByLanguage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMItemByLanguageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IKatahikiRenkeiService">
+    <wsdl:operation name="GetStandardNoki">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetStandardNoki" message="tns:IKatahikiRenkeiService_GetStandardNoki_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetStandardNokiResponse" message="tns:IKatahikiRenkeiService_GetStandardNoki_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetElKubun">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetElKubun" message="tns:IKatahikiRenkeiService_GetElKubun_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetElKubunResponse" message="tns:IKatahikiRenkeiService_GetElKubun_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetElFlag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetElFlag" message="tns:IKatahikiRenkeiService_GetElFlag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetElFlagResponse" message="tns:IKatahikiRenkeiService_GetElFlag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuantityUnit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetQuantityUnit" message="tns:IKatahikiRenkeiService_GetQuantityUnit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetQuantityUnitResponse" message="tns:IKatahikiRenkeiService_GetQuantityUnit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNetPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetNetPrice" message="tns:IKatahikiRenkeiService_GetNetPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetNetPriceResponse" message="tns:IKatahikiRenkeiService_GetNetPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSwitchFlg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetSwitchFlg" message="tns:IKatahikiRenkeiService_GetSwitchFlg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetSwitchFlgResponse" message="tns:IKatahikiRenkeiService_GetSwitchFlg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectCatalog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetSelectCatalog" message="tns:IKatahikiRenkeiService_GetSelectCatalog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetSelectCatalogResponse" message="tns:IKatahikiRenkeiService_GetSelectCatalog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsGlc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/IsGlc" message="tns:IKatahikiRenkeiService_IsGlc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/IsGlcResponse" message="tns:IKatahikiRenkeiService_IsGlc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMItemByLanguage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetMItemByLanguage" message="tns:IKatahikiRenkeiService_GetMItemByLanguage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKatahikiRenkeiService/GetMItemByLanguageResponse" message="tns:IKatahikiRenkeiService_GetMItemByLanguage_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IKatahikiRenkeiService" type="tns:IKatahikiRenkeiService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStandardNoki">
+      <soap:operation soapAction="http://tempuri.org/IKatahikiRenkeiService/GetStandardNoki" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetElKubun">
+      <soap:operation soapAction="http://tempuri.org/IKatahikiRenkeiService/GetElKubun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetElFlag">
+      <soap:operation soapAction="http://tempuri.org/IKatahikiRenkeiService/GetElFlag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuantityUnit">
+      <soap:operation soapAction="http://tempuri.org/IKatahikiRenkeiService/GetQuantityUnit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNetPrice">
+      <soap:operation soapAction="http://tempuri.org/IKatahikiRenkeiService/GetNetPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSwitchFlg">
+      <soap:operation soapAction="http://tempuri.org/IKatahikiRenkeiService/GetSwitchFlg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectCatalog">
+      <soap:operation soapAction="http://tempuri.org/IKatahikiRenkeiService/GetSelectCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsGlc">
+      <soap:operation soapAction="http://tempuri.org/IKatahikiRenkeiService/IsGlc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMItemByLanguage">
+      <soap:operation soapAction="http://tempuri.org/IKatahikiRenkeiService/GetMItemByLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="KatahikiRenkeiService">
+    <wsdl:port name="BasicHttpBinding_IKatahikiRenkeiService" binding="tns:BasicHttpBinding_IKatahikiRenkeiService">
+      <soap:address location="http://sv413/WcfKatahikiRenkei/KatahikiRenkeiService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

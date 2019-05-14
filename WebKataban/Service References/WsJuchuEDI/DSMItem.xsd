@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DSMItem.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DSMItem.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DSMItem.xsd" id="DSMItem" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DSMItem">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="M_ITEM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="KATABAN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CHECKKBN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LISTPRICE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="REGISTPRICE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SSPRICE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="BSPRICE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="GSPRICE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PSPRICE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SHIPPLACE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MASTERFLG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AUTOREGISTFLG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VALIDDATE" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="STRNOUKI" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TEKIYOUKOSUU" type="xs:decimal" />
+              <xs:element minOccurs="0" name="ZAIKOFLG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SIMPLEORDERFLG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="REGISTDATE" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="UPDATEDATE" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="UPDATEID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SETUNIT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PRICEUNIT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CYLINDERMSGFLG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="M_ITEM_UPDATE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="KATABAN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LISTPRICE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="REGISTPRICE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SSPRICE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="GSPRICE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="BSPRICE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PSPRICE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SIMPLEORDERFLG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VALIDDATE" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="UPDATEDATE" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="UPDATEID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:M_ITEM" />
+      <xs:field xpath="mstns:KATABAN" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="M_ITEM_UPDATE_Constraint1">
+      <xs:selector xpath=".//mstns:M_ITEM_UPDATE" />
+      <xs:field xpath="mstns:KATABAN" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

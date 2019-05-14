@@ -1,0 +1,38 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Master_Main.Master.vb"
+    Inherits="WebKataban.Master_Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <%--<meta name="viewport" content="user-scalable=0" />--%>    <%csslink.Href &= ReleaseDate%>
+    <link href="../Styles/Style.css?v=" id="csslink" rel="stylesheet" type="text/css" />
+    <script language="JavaScript" type="text/javascript" src='Scripts/jquery-1.11.1.min.js'></script>
+    <script language='JavaScript' type="text/javascript" src='Scripts/JSCommon.js?v=<%=ReleaseDate %>'></script>
+    <script language='JavaScript' type="text/javascript" src='Scripts/JSKatabanTest.js?v=<%=ReleaseDate %>'></script>
+    <script language='JavaScript' type="text/javascript" src='Scripts/JSMaster.js?v=<%=ReleaseDate %>'></script>
+    <script language='JavaScript' type="text/javascript" src='Scripts/JSOutOfOption.js?v=<%=ReleaseDate %>'></script>
+    <script language='JavaScript' type="text/javascript" src='Scripts/JSRodEnd.js?v=<%=ReleaseDate %>'></script>
+    <script language='JavaScript' type="text/javascript" src='Scripts/JSSiyou.js?v=<%=ReleaseDate %>'></script>
+    <script language='JavaScript' type="text/javascript" src='Scripts/JSTanka.js?v=<%=ReleaseDate %>'></script>
+    <script language='JavaScript' type="text/javascript" src='Scripts/JSTankaISO.js?v=<%=ReleaseDate %>'></script>
+    <script language='JavaScript' type="text/javascript" src='Scripts/JSType.js?v=<%=ReleaseDate %>'></script>
+    <script language='JavaScript' type="text/javascript" src='Scripts/JSYouso.js?v=<%=ReleaseDate %>'></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <center>
+        <div style="width: 1000px;">
+            <asp:ContentPlaceHolder ID="ContentTitle" runat="server">
+            </asp:ContentPlaceHolder>
+            <div style="width: 100%">
+                <asp:ContentPlaceHolder ID="ContentDetail" runat="server" />
+            </div>
+            <asp:ContentPlaceHolder ID="footer" runat="server" />
+        </div>
+    </center>
+    </form>
+</body>
+</html>

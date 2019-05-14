@@ -1,0 +1,1606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceDBIO" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd3" namespace="http://tempuri.org/DSMItem.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd4" namespace="http://tempuri.org/DSMSPPrice.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd5" namespace="http://tempuri.org/DSMOrderItem.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd6" namespace="http://tempuri.org/DSMDeptDenno.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd7" namespace="http://tempuri.org/DSMEndUserCnv.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd8" namespace="http://tempuri.org/DSMNijiSyosyaCnv.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd9" namespace="http://tempuri.org/DSMTokuisakiCnv.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd10" namespace="http://tempuri.org/DSMMKisyu.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd11" namespace="http://tempuri.org/DSMSystem.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd12" namespace="http://tempuri.org/DSMTansyuku.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd13" namespace="http://tempuri.org/DSTBatchLog.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd14" namespace="http://tempuri.org/DSTChumon.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/CKD" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd15" namespace="http://tempuri.org/DSTJuchu.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd17" namespace="http://tempuri.org/DSTKikan.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd18" namespace="http://tempuri.org/DSMKensakuJoken.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd19" namespace="http://tempuri.org/DSMKATAHIKI.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd20" namespace="http://tempuri.org/DSTJuchuRirekiList.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd22" namespace="http://tempuri.org/DstChumonCnt.xsd" />
+      <xsd:import schemaLocation="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd23" namespace="http://tempuri.org/DSTSenko.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceDBIO_SetTTranLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetTTranLog" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_SetTTranLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetTTranLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKensuInfoKikaku_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKensuInfoKikaku" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKensuInfoKikaku_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKensuInfoKikakuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKensuInfoEigyo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKensuInfoEigyo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKensuInfoEigyo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKensuInfoEigyoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetItemList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetItemList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItem" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateItem" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_FileInsertItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileInsertItem" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_FileInsertItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileInsertItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_FileInsertSPPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileInsertSPPrice" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_FileInsertSPPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileInsertSPPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_FileUpdatePriceItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileUpdatePriceItem" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_FileUpdatePriceItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileUpdatePriceItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_FileUpdatePriceSPPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileUpdatePriceSPPrice" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_FileUpdatePriceSPPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileUpdatePriceSPPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_FileUpdateValDateItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileUpdateValDateItem" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_FileUpdateValDateItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileUpdateValDateItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetOrderItemList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderItemList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetOrderItemList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderItemListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetOrderItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderItem" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetOrderItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateOrderItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderItem" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateOrderItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckOrderItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOrderItem" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckOrderItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOrderItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetSPPriceList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSPPriceList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetSPPriceList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSPPriceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetTokuisakiName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTokuisakiName" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetTokuisakiName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTokuisakiNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateSPPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSPPrice" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateSPPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSPPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetDeptDennoList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeptDennoList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetDeptDennoList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeptDennoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetDeptDenno_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeptDenno" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetDeptDenno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeptDennoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckDeptDenno_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckDeptDenno" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckDeptDenno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckDeptDennoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateDeptDenno_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeptDenno" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateDeptDenno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeptDennoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetEndUserCnvList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndUserCnvList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetEndUserCnvList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndUserCnvListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateEndUserCnv_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEndUserCnv" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateEndUserCnv_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEndUserCnvResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetEndUserCnv_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndUserCnv" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetEndUserCnv_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndUserCnvResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetNijiSyosyaCnvList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNijiSyosyaCnvList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetNijiSyosyaCnvList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNijiSyosyaCnvListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetNijiSyosyaCnv_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNijiSyosyaCnv" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetNijiSyosyaCnv_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNijiSyosyaCnvResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateNijiSyosya_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNijiSyosya" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateNijiSyosya_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNijiSyosyaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetTokuisakiCnvList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTokuisakiCnvList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetTokuisakiCnvList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTokuisakiCnvListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetTokuisakiCnv_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTokuisakiCnv" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetTokuisakiCnv_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTokuisakiCnvResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateTokuisakiCnv_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTokuisakiCnv" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateTokuisakiCnv_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTokuisakiCnvResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetMKisyuList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMKisyuList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetMKisyuList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMKisyuListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetMKisyu_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMKisyu" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetMKisyu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMKisyuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateMKisyu_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMKisyu" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateMKisyu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMKisyuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystem" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetTansyukuList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTansyukuList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetTansyukuList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTansyukuListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetTansyuku_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTansyuku" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetTansyuku_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTansyukuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateTansyuku_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTansyuku" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateTansyuku_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTansyukuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetTansyukuSelect_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTansyukuSelect" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetTansyukuSelect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTansyukuSelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetMinTansyukuCod_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinTansyukuCod" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetMinTansyukuCod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinTansyukuCodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateSYSTEM_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSYSTEM" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateSYSTEM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSYSTEMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetBATCHLOGList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBATCHLOGList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetBATCHLOGList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBATCHLOGListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKatabanInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKatabanInfo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKatabanInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKatabanInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetCHUMONList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCHUMONList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetCHUMONList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCHUMONListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetChumon_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChumon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetChumon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChumonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckChumon_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckChumon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckChumon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckChumonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetJuchuList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJuchuList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetJuchuList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJuchuListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetJuchuList_ExceptionInfoFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/CKD" name="detail" element="q1:ExceptionInfo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetJuchu_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJuchu" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetJuchu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJuchuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateJuchu_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJuchu" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateJuchu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJuchuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateJuchuKakutei_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJuchuKakutei" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateJuchuKakutei_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJuchuKakuteiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_JuchuTorikeshi_InputMessage">
+    <wsdl:part name="parameters" element="tns:JuchuTorikeshi" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_JuchuTorikeshi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JuchuTorikeshiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetJuchuResultList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJuchuResultList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetJuchuResultList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJuchuResultListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateJuchu_PrintFlg_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJuchu_PrintFlg" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateJuchu_PrintFlg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJuchu_PrintFlgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckJuchu_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckJuchu" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckJuchu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckJuchuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckJuchuInputData_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckJuchuInputData" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckJuchuInputData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckJuchuInputDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckJuchuXmlData_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckJuchuXmlData" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckJuchuXmlData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckJuchuXmlDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKikanList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKikanList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKikanList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKikanListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKikan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKikan" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKikan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKikanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateKikan_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateKikan" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateKikan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateKikanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKensakuJokenList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKensakuJokenList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKensakuJokenList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKensakuJokenListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateKensakuJoken_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateKensakuJoken" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_UpdateKensakuJoken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateKensakuJokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckG2ShipPlace_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckG2ShipPlace" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckG2ShipPlace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckG2ShipPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetG2ShipPlaceCodList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetG2ShipPlaceCodList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetG2ShipPlaceCodList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetG2ShipPlaceCodListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckG2Tokuisaki_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckG2Tokuisaki" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckG2Tokuisaki_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckG2TokuisakiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetG2TokuisakiName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetG2TokuisakiName" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetG2TokuisakiName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetG2TokuisakiNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckP3WebCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckP3WebCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_CheckP3WebCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckP3WebCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetP3WebCustomerName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetP3WebCustomerName" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetP3WebCustomerName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetP3WebCustomerNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetDeptDennoPW_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeptDennoPW" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetDeptDennoPW_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeptDennoPWResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_InsertKatahikiItem1_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertKatahikiItem1" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_InsertKatahikiItem1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertKatahikiItem1Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_InsertKatahikiItem2_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertKatahikiItem2" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_InsertKatahikiItem2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertKatahikiItem2Response" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKatahikiItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKatahikiItem" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetKatahikiItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKatahikiItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetJuchuRirekiList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJuchuRirekiList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetJuchuRirekiList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJuchuRirekiListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetSelectCatalog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectCatalog" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetSelectCatalog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectCatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_Encode_InputMessage">
+    <wsdl:part name="parameters" element="tns:Encode" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_Encode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EncodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_Decode_InputMessage">
+    <wsdl:part name="parameters" element="tns:Decode" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_Decode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetCHUMONCntList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCHUMONCntList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetCHUMONCntList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCHUMONCntListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetOldCHUMONList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldCHUMONList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetOldCHUMONList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldCHUMONListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetOldChumon_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldChumon" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetOldChumon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldChumonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetOldJuchuResultList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldJuchuResultList" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetOldJuchuResultList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldJuchuResultListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetOldJuchu_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldJuchu" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetOldJuchu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldJuchuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetSenkoInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSenkoInfo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_GetSenkoInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSenkoInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_TestWCF_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestWCF" />
+  </wsdl:message>
+  <wsdl:message name="IServiceDBIO_TestWCF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestWCFResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceDBIO">
+    <wsdl:operation name="SetTTranLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/SetTTranLog" message="tns:IServiceDBIO_SetTTranLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/SetTTranLogResponse" message="tns:IServiceDBIO_SetTTranLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKensuInfoKikaku">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetKensuInfoKikaku" message="tns:IServiceDBIO_GetKensuInfoKikaku_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetKensuInfoKikakuResponse" message="tns:IServiceDBIO_GetKensuInfoKikaku_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKensuInfoEigyo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetKensuInfoEigyo" message="tns:IServiceDBIO_GetKensuInfoEigyo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetKensuInfoEigyoResponse" message="tns:IServiceDBIO_GetKensuInfoEigyo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetItemList" message="tns:IServiceDBIO_GetItemList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetItemListResponse" message="tns:IServiceDBIO_GetItemList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetItem" message="tns:IServiceDBIO_GetItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetItemResponse" message="tns:IServiceDBIO_GetItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateItem" message="tns:IServiceDBIO_UpdateItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateItemResponse" message="tns:IServiceDBIO_UpdateItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileInsertItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/FileInsertItem" message="tns:IServiceDBIO_FileInsertItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/FileInsertItemResponse" message="tns:IServiceDBIO_FileInsertItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileInsertSPPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/FileInsertSPPrice" message="tns:IServiceDBIO_FileInsertSPPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/FileInsertSPPriceResponse" message="tns:IServiceDBIO_FileInsertSPPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileUpdatePriceItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/FileUpdatePriceItem" message="tns:IServiceDBIO_FileUpdatePriceItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/FileUpdatePriceItemResponse" message="tns:IServiceDBIO_FileUpdatePriceItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileUpdatePriceSPPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/FileUpdatePriceSPPrice" message="tns:IServiceDBIO_FileUpdatePriceSPPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/FileUpdatePriceSPPriceResponse" message="tns:IServiceDBIO_FileUpdatePriceSPPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileUpdateValDateItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/FileUpdateValDateItem" message="tns:IServiceDBIO_FileUpdateValDateItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/FileUpdateValDateItemResponse" message="tns:IServiceDBIO_FileUpdateValDateItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderItemList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetOrderItemList" message="tns:IServiceDBIO_GetOrderItemList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetOrderItemListResponse" message="tns:IServiceDBIO_GetOrderItemList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetOrderItem" message="tns:IServiceDBIO_GetOrderItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetOrderItemResponse" message="tns:IServiceDBIO_GetOrderItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateOrderItem" message="tns:IServiceDBIO_UpdateOrderItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateOrderItemResponse" message="tns:IServiceDBIO_UpdateOrderItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOrderItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/CheckOrderItem" message="tns:IServiceDBIO_CheckOrderItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/CheckOrderItemResponse" message="tns:IServiceDBIO_CheckOrderItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSPPriceList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetSPPriceList" message="tns:IServiceDBIO_GetSPPriceList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetSPPriceListResponse" message="tns:IServiceDBIO_GetSPPriceList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTokuisakiName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetTokuisakiName" message="tns:IServiceDBIO_GetTokuisakiName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetTokuisakiNameResponse" message="tns:IServiceDBIO_GetTokuisakiName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSPPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateSPPrice" message="tns:IServiceDBIO_UpdateSPPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateSPPriceResponse" message="tns:IServiceDBIO_UpdateSPPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptDennoList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetDeptDennoList" message="tns:IServiceDBIO_GetDeptDennoList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetDeptDennoListResponse" message="tns:IServiceDBIO_GetDeptDennoList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptDenno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetDeptDenno" message="tns:IServiceDBIO_GetDeptDenno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetDeptDennoResponse" message="tns:IServiceDBIO_GetDeptDenno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDeptDenno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/CheckDeptDenno" message="tns:IServiceDBIO_CheckDeptDenno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/CheckDeptDennoResponse" message="tns:IServiceDBIO_CheckDeptDenno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeptDenno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateDeptDenno" message="tns:IServiceDBIO_UpdateDeptDenno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateDeptDennoResponse" message="tns:IServiceDBIO_UpdateDeptDenno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEndUserCnvList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetEndUserCnvList" message="tns:IServiceDBIO_GetEndUserCnvList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetEndUserCnvListResponse" message="tns:IServiceDBIO_GetEndUserCnvList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEndUserCnv">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateEndUserCnv" message="tns:IServiceDBIO_UpdateEndUserCnv_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateEndUserCnvResponse" message="tns:IServiceDBIO_UpdateEndUserCnv_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEndUserCnv">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetEndUserCnv" message="tns:IServiceDBIO_GetEndUserCnv_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetEndUserCnvResponse" message="tns:IServiceDBIO_GetEndUserCnv_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNijiSyosyaCnvList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetNijiSyosyaCnvList" message="tns:IServiceDBIO_GetNijiSyosyaCnvList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetNijiSyosyaCnvListResponse" message="tns:IServiceDBIO_GetNijiSyosyaCnvList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNijiSyosyaCnv">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetNijiSyosyaCnv" message="tns:IServiceDBIO_GetNijiSyosyaCnv_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetNijiSyosyaCnvResponse" message="tns:IServiceDBIO_GetNijiSyosyaCnv_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNijiSyosya">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateNijiSyosya" message="tns:IServiceDBIO_UpdateNijiSyosya_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateNijiSyosyaResponse" message="tns:IServiceDBIO_UpdateNijiSyosya_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTokuisakiCnvList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetTokuisakiCnvList" message="tns:IServiceDBIO_GetTokuisakiCnvList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetTokuisakiCnvListResponse" message="tns:IServiceDBIO_GetTokuisakiCnvList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTokuisakiCnv">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetTokuisakiCnv" message="tns:IServiceDBIO_GetTokuisakiCnv_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetTokuisakiCnvResponse" message="tns:IServiceDBIO_GetTokuisakiCnv_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTokuisakiCnv">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateTokuisakiCnv" message="tns:IServiceDBIO_UpdateTokuisakiCnv_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateTokuisakiCnvResponse" message="tns:IServiceDBIO_UpdateTokuisakiCnv_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMKisyuList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetMKisyuList" message="tns:IServiceDBIO_GetMKisyuList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetMKisyuListResponse" message="tns:IServiceDBIO_GetMKisyuList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMKisyu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetMKisyu" message="tns:IServiceDBIO_GetMKisyu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetMKisyuResponse" message="tns:IServiceDBIO_GetMKisyu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMKisyu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateMKisyu" message="tns:IServiceDBIO_UpdateMKisyu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateMKisyuResponse" message="tns:IServiceDBIO_UpdateMKisyu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetSystem" message="tns:IServiceDBIO_GetSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetSystemResponse" message="tns:IServiceDBIO_GetSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTansyukuList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetTansyukuList" message="tns:IServiceDBIO_GetTansyukuList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetTansyukuListResponse" message="tns:IServiceDBIO_GetTansyukuList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTansyuku">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetTansyuku" message="tns:IServiceDBIO_GetTansyuku_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetTansyukuResponse" message="tns:IServiceDBIO_GetTansyuku_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTansyuku">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateTansyuku" message="tns:IServiceDBIO_UpdateTansyuku_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateTansyukuResponse" message="tns:IServiceDBIO_UpdateTansyuku_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTansyukuSelect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetTansyukuSelect" message="tns:IServiceDBIO_GetTansyukuSelect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetTansyukuSelectResponse" message="tns:IServiceDBIO_GetTansyukuSelect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMinTansyukuCod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetMinTansyukuCod" message="tns:IServiceDBIO_GetMinTansyukuCod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetMinTansyukuCodResponse" message="tns:IServiceDBIO_GetMinTansyukuCod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSYSTEM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateSYSTEM" message="tns:IServiceDBIO_UpdateSYSTEM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateSYSTEMResponse" message="tns:IServiceDBIO_UpdateSYSTEM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBATCHLOGList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetBATCHLOGList" message="tns:IServiceDBIO_GetBATCHLOGList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetBATCHLOGListResponse" message="tns:IServiceDBIO_GetBATCHLOGList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKatabanInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetKatabanInfo" message="tns:IServiceDBIO_GetKatabanInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetKatabanInfoResponse" message="tns:IServiceDBIO_GetKatabanInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCHUMONList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetCHUMONList" message="tns:IServiceDBIO_GetCHUMONList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetCHUMONListResponse" message="tns:IServiceDBIO_GetCHUMONList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChumon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetChumon" message="tns:IServiceDBIO_GetChumon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetChumonResponse" message="tns:IServiceDBIO_GetChumon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckChumon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/CheckChumon" message="tns:IServiceDBIO_CheckChumon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/CheckChumonResponse" message="tns:IServiceDBIO_CheckChumon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJuchuList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetJuchuList" message="tns:IServiceDBIO_GetJuchuList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetJuchuListResponse" message="tns:IServiceDBIO_GetJuchuList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceDBIO/GetJuchuListExceptionInfoFault" name="ExceptionInfoFault" message="tns:IServiceDBIO_GetJuchuList_ExceptionInfoFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJuchu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetJuchu" message="tns:IServiceDBIO_GetJuchu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetJuchuResponse" message="tns:IServiceDBIO_GetJuchu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJuchu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateJuchu" message="tns:IServiceDBIO_UpdateJuchu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateJuchuResponse" message="tns:IServiceDBIO_UpdateJuchu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJuchuKakutei">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateJuchuKakutei" message="tns:IServiceDBIO_UpdateJuchuKakutei_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateJuchuKakuteiResponse" message="tns:IServiceDBIO_UpdateJuchuKakutei_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JuchuTorikeshi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/JuchuTorikeshi" message="tns:IServiceDBIO_JuchuTorikeshi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/JuchuTorikeshiResponse" message="tns:IServiceDBIO_JuchuTorikeshi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJuchuResultList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetJuchuResultList" message="tns:IServiceDBIO_GetJuchuResultList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetJuchuResultListResponse" message="tns:IServiceDBIO_GetJuchuResultList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJuchu_PrintFlg">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateJuchu_PrintFlg" message="tns:IServiceDBIO_UpdateJuchu_PrintFlg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateJuchu_PrintFlgResponse" message="tns:IServiceDBIO_UpdateJuchu_PrintFlg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckJuchu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/CheckJuchu" message="tns:IServiceDBIO_CheckJuchu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/CheckJuchuResponse" message="tns:IServiceDBIO_CheckJuchu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckJuchuInputData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/CheckJuchuInputData" message="tns:IServiceDBIO_CheckJuchuInputData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/CheckJuchuInputDataResponse" message="tns:IServiceDBIO_CheckJuchuInputData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckJuchuXmlData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/CheckJuchuXmlData" message="tns:IServiceDBIO_CheckJuchuXmlData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/CheckJuchuXmlDataResponse" message="tns:IServiceDBIO_CheckJuchuXmlData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKikanList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetKikanList" message="tns:IServiceDBIO_GetKikanList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetKikanListResponse" message="tns:IServiceDBIO_GetKikanList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKikan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetKikan" message="tns:IServiceDBIO_GetKikan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetKikanResponse" message="tns:IServiceDBIO_GetKikan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKikan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateKikan" message="tns:IServiceDBIO_UpdateKikan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateKikanResponse" message="tns:IServiceDBIO_UpdateKikan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKensakuJokenList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetKensakuJokenList" message="tns:IServiceDBIO_GetKensakuJokenList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetKensakuJokenListResponse" message="tns:IServiceDBIO_GetKensakuJokenList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKensakuJoken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateKensakuJoken" message="tns:IServiceDBIO_UpdateKensakuJoken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/UpdateKensakuJokenResponse" message="tns:IServiceDBIO_UpdateKensakuJoken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckG2ShipPlace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/CheckG2ShipPlace" message="tns:IServiceDBIO_CheckG2ShipPlace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/CheckG2ShipPlaceResponse" message="tns:IServiceDBIO_CheckG2ShipPlace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetG2ShipPlaceCodList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetG2ShipPlaceCodList" message="tns:IServiceDBIO_GetG2ShipPlaceCodList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetG2ShipPlaceCodListResponse" message="tns:IServiceDBIO_GetG2ShipPlaceCodList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckG2Tokuisaki">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/CheckG2Tokuisaki" message="tns:IServiceDBIO_CheckG2Tokuisaki_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/CheckG2TokuisakiResponse" message="tns:IServiceDBIO_CheckG2Tokuisaki_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetG2TokuisakiName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetG2TokuisakiName" message="tns:IServiceDBIO_GetG2TokuisakiName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetG2TokuisakiNameResponse" message="tns:IServiceDBIO_GetG2TokuisakiName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckP3WebCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/CheckP3WebCustomer" message="tns:IServiceDBIO_CheckP3WebCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/CheckP3WebCustomerResponse" message="tns:IServiceDBIO_CheckP3WebCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetP3WebCustomerName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetP3WebCustomerName" message="tns:IServiceDBIO_GetP3WebCustomerName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetP3WebCustomerNameResponse" message="tns:IServiceDBIO_GetP3WebCustomerName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptDennoPW">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetDeptDennoPW" message="tns:IServiceDBIO_GetDeptDennoPW_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetDeptDennoPWResponse" message="tns:IServiceDBIO_GetDeptDennoPW_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertKatahikiItem1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/InsertKatahikiItem1" message="tns:IServiceDBIO_InsertKatahikiItem1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/InsertKatahikiItem1Response" message="tns:IServiceDBIO_InsertKatahikiItem1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertKatahikiItem2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/InsertKatahikiItem2" message="tns:IServiceDBIO_InsertKatahikiItem2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/InsertKatahikiItem2Response" message="tns:IServiceDBIO_InsertKatahikiItem2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKatahikiItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetKatahikiItem" message="tns:IServiceDBIO_GetKatahikiItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetKatahikiItemResponse" message="tns:IServiceDBIO_GetKatahikiItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJuchuRirekiList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetJuchuRirekiList" message="tns:IServiceDBIO_GetJuchuRirekiList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetJuchuRirekiListResponse" message="tns:IServiceDBIO_GetJuchuRirekiList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectCatalog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetSelectCatalog" message="tns:IServiceDBIO_GetSelectCatalog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetSelectCatalogResponse" message="tns:IServiceDBIO_GetSelectCatalog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Encode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/Encode" message="tns:IServiceDBIO_Encode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/EncodeResponse" message="tns:IServiceDBIO_Encode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Decode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/Decode" message="tns:IServiceDBIO_Decode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/DecodeResponse" message="tns:IServiceDBIO_Decode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCHUMONCntList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetCHUMONCntList" message="tns:IServiceDBIO_GetCHUMONCntList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetCHUMONCntListResponse" message="tns:IServiceDBIO_GetCHUMONCntList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOldCHUMONList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetOldCHUMONList" message="tns:IServiceDBIO_GetOldCHUMONList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetOldCHUMONListResponse" message="tns:IServiceDBIO_GetOldCHUMONList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOldChumon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetOldChumon" message="tns:IServiceDBIO_GetOldChumon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetOldChumonResponse" message="tns:IServiceDBIO_GetOldChumon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOldJuchuResultList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetOldJuchuResultList" message="tns:IServiceDBIO_GetOldJuchuResultList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetOldJuchuResultListResponse" message="tns:IServiceDBIO_GetOldJuchuResultList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOldJuchu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetOldJuchu" message="tns:IServiceDBIO_GetOldJuchu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetOldJuchuResponse" message="tns:IServiceDBIO_GetOldJuchu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSenkoInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/GetSenkoInfo" message="tns:IServiceDBIO_GetSenkoInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/GetSenkoInfoResponse" message="tns:IServiceDBIO_GetSenkoInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestWCF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceDBIO/TestWCF" message="tns:IServiceDBIO_TestWCF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceDBIO/TestWCFResponse" message="tns:IServiceDBIO_TestWCF_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceDBIO" type="tns:IServiceDBIO">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetTTranLog">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/SetTTranLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKensuInfoKikaku">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetKensuInfoKikaku" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKensuInfoEigyo">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetKensuInfoEigyo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetItemList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItem">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItem">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileInsertItem">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/FileInsertItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileInsertSPPrice">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/FileInsertSPPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileUpdatePriceItem">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/FileUpdatePriceItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileUpdatePriceSPPrice">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/FileUpdatePriceSPPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileUpdateValDateItem">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/FileUpdateValDateItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderItemList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetOrderItemList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderItem">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetOrderItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderItem">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateOrderItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOrderItem">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/CheckOrderItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSPPriceList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetSPPriceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTokuisakiName">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetTokuisakiName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSPPrice">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateSPPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptDennoList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetDeptDennoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptDenno">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetDeptDenno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDeptDenno">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/CheckDeptDenno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeptDenno">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateDeptDenno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEndUserCnvList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetEndUserCnvList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEndUserCnv">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateEndUserCnv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEndUserCnv">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetEndUserCnv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNijiSyosyaCnvList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetNijiSyosyaCnvList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNijiSyosyaCnv">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetNijiSyosyaCnv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNijiSyosya">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateNijiSyosya" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTokuisakiCnvList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetTokuisakiCnvList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTokuisakiCnv">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetTokuisakiCnv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTokuisakiCnv">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateTokuisakiCnv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMKisyuList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetMKisyuList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMKisyu">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetMKisyu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMKisyu">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateMKisyu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystem">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTansyukuList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetTansyukuList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTansyuku">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetTansyuku" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTansyuku">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateTansyuku" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTansyukuSelect">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetTansyukuSelect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMinTansyukuCod">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetMinTansyukuCod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSYSTEM">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateSYSTEM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBATCHLOGList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetBATCHLOGList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKatabanInfo">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetKatabanInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCHUMONList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetCHUMONList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChumon">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetChumon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckChumon">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/CheckChumon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJuchuList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetJuchuList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExceptionInfoFault">
+        <soap:fault use="literal" name="ExceptionInfoFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJuchu">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetJuchu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJuchu">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateJuchu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJuchuKakutei">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateJuchuKakutei" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JuchuTorikeshi">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/JuchuTorikeshi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJuchuResultList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetJuchuResultList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJuchu_PrintFlg">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateJuchu_PrintFlg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckJuchu">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/CheckJuchu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckJuchuInputData">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/CheckJuchuInputData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckJuchuXmlData">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/CheckJuchuXmlData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKikanList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetKikanList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKikan">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetKikan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKikan">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateKikan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKensakuJokenList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetKensakuJokenList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateKensakuJoken">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/UpdateKensakuJoken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckG2ShipPlace">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/CheckG2ShipPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetG2ShipPlaceCodList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetG2ShipPlaceCodList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckG2Tokuisaki">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/CheckG2Tokuisaki" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetG2TokuisakiName">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetG2TokuisakiName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckP3WebCustomer">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/CheckP3WebCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetP3WebCustomerName">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetP3WebCustomerName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptDennoPW">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetDeptDennoPW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertKatahikiItem1">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/InsertKatahikiItem1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertKatahikiItem2">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/InsertKatahikiItem2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKatahikiItem">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetKatahikiItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJuchuRirekiList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetJuchuRirekiList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectCatalog">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetSelectCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encode">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/Encode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decode">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/Decode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCHUMONCntList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetCHUMONCntList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOldCHUMONList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetOldCHUMONList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOldChumon">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetOldChumon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOldJuchuResultList">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetOldJuchuResultList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOldJuchu">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetOldJuchu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSenkoInfo">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/GetSenkoInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestWCF">
+      <soap:operation soapAction="http://tempuri.org/IServiceDBIO/TestWCF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceDBIO">
+    <wsdl:port name="BasicHttpBinding_IServiceDBIO" binding="tns:BasicHttpBinding_IServiceDBIO">
+      <soap:address location="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckLoginTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckLoginTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckLoginTimeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLoginTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLoginTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateLoginTimeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckMacaddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMacaddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckMacaddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckMacaddressResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckAuthentication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMacaddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSerialNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckAuthenticationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckAuthenticationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMacAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMacAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMacAddressResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PutMacAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMacAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PutMacAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PutMacAddressResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Encode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPlainText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Decode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCipherText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DecodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DecodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckLoginTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckLoginTime" />
+  </wsdl:message>
+  <wsdl:message name="CheckLoginTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckLoginTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLoginTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateLoginTime" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLoginTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateLoginTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckMacaddressSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckMacaddress" />
+  </wsdl:message>
+  <wsdl:message name="CheckMacaddressSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckMacaddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthenticationSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthenticationSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMacAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMacAddress" />
+  </wsdl:message>
+  <wsdl:message name="GetMacAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMacAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="PutMacAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:PutMacAddress" />
+  </wsdl:message>
+  <wsdl:message name="PutMacAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:PutMacAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Encode" />
+  </wsdl:message>
+  <wsdl:message name="EncodeSoapOut">
+    <wsdl:part name="parameters" element="tns:EncodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DecodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Decode" />
+  </wsdl:message>
+  <wsdl:message name="DecodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DecodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LoginCheckSoap">
+    <wsdl:operation name="GetUserID">
+      <wsdl:input message="tns:GetUserIDSoapIn" />
+      <wsdl:output message="tns:GetUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckLoginTime">
+      <wsdl:input message="tns:CheckLoginTimeSoapIn" />
+      <wsdl:output message="tns:CheckLoginTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoginTime">
+      <wsdl:input message="tns:UpdateLoginTimeSoapIn" />
+      <wsdl:output message="tns:UpdateLoginTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckMacaddress">
+      <wsdl:input message="tns:CheckMacaddressSoapIn" />
+      <wsdl:output message="tns:CheckMacaddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthentication">
+      <wsdl:input message="tns:CheckAuthenticationSoapIn" />
+      <wsdl:output message="tns:CheckAuthenticationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMacAddress">
+      <wsdl:input message="tns:GetMacAddressSoapIn" />
+      <wsdl:output message="tns:GetMacAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PutMacAddress">
+      <wsdl:input message="tns:PutMacAddressSoapIn" />
+      <wsdl:output message="tns:PutMacAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encode">
+      <wsdl:input message="tns:EncodeSoapIn" />
+      <wsdl:output message="tns:EncodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Decode">
+      <wsdl:input message="tns:DecodeSoapIn" />
+      <wsdl:output message="tns:DecodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LoginCheckSoap" type="tns:LoginCheckSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserID">
+      <soap:operation soapAction="http://tempuri.org/GetUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLoginTime">
+      <soap:operation soapAction="http://tempuri.org/CheckLoginTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoginTime">
+      <soap:operation soapAction="http://tempuri.org/UpdateLoginTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckMacaddress">
+      <soap:operation soapAction="http://tempuri.org/CheckMacaddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthentication">
+      <soap:operation soapAction="http://tempuri.org/CheckAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMacAddress">
+      <soap:operation soapAction="http://tempuri.org/GetMacAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutMacAddress">
+      <soap:operation soapAction="http://tempuri.org/PutMacAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encode">
+      <soap:operation soapAction="http://tempuri.org/Encode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decode">
+      <soap:operation soapAction="http://tempuri.org/Decode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LoginCheckSoap12" type="tns:LoginCheckSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserID">
+      <soap12:operation soapAction="http://tempuri.org/GetUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckLoginTime">
+      <soap12:operation soapAction="http://tempuri.org/CheckLoginTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoginTime">
+      <soap12:operation soapAction="http://tempuri.org/UpdateLoginTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckMacaddress">
+      <soap12:operation soapAction="http://tempuri.org/CheckMacaddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthentication">
+      <soap12:operation soapAction="http://tempuri.org/CheckAuthentication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMacAddress">
+      <soap12:operation soapAction="http://tempuri.org/GetMacAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutMacAddress">
+      <soap12:operation soapAction="http://tempuri.org/PutMacAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encode">
+      <soap12:operation soapAction="http://tempuri.org/Encode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decode">
+      <soap12:operation soapAction="http://tempuri.org/Decode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LoginCheck">
+    <wsdl:port name="LoginCheckSoap" binding="tns:LoginCheckSoap">
+      <soap:address location="https://www21.ckd.co.jp/weblogin_test/logincheck.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LoginCheckSoap12" binding="tns:LoginCheckSoap12">
+      <soap12:address location="https://www21.ckd.co.jp/weblogin_test/logincheck.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

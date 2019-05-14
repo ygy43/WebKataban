@@ -1,0 +1,1438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{6C07D4CA-AA3D-4542-ABAC-F24DC6835BE1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebKataban</RootNamespace>
+    <AssemblyName>WebKataban</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebKataban.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebKataban.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNetPager, Version=7.5.1.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNetPager.7.5.1.0\lib\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="CKDStandard.ManifoldExport, Version=1.0.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CKDStandard.ManifoldExport.1.0.12\lib\CKDStandard.ManifoldExport.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="KHImage\ckd\Collapsing.gif" />
+    <Content Include="KHImage\ckd\en\DirectionalControlValve.png" />
+    <Content Include="KHImage\ckd\en\Test.png" />
+    <Content Include="KHImage\ckd\Expanding.gif" />
+    <Content Include="KHImage\ckd\ja\DirectionalControlValve.png" />
+    <Content Include="KHImage\ckd\ja\Test.png" />
+    <Content Include="KHImage\ckd\ko\DirectionalControlValve.png" />
+    <Content Include="KHImage\ckd\ko\Test.png" />
+    <Content Include="KHImage\ckd\tw\DirectionalControlValve.png" />
+    <Content Include="KHImage\ckd\tw\Test.png" />
+    <Content Include="KHImage\ckd\zh\DirectionalControlValve.png" />
+    <Content Include="KHImage\ckd\zh\Test.png" />
+    <Content Include="KHImage\EKSListChina.gif" />
+    <Content Include="KHImage\EKSListEnglish.gif" />
+    <Content Include="KHImage\EKSListJapan.gif" />
+    <Content Include="KHImage\EKSListKorea.gif" />
+    <Content Include="KHImage\EKSListTaiwan.gif" />
+    <Content Include="KHImage\ESMMotorChina.gif" />
+    <Content Include="KHImage\ESMMotorEnglish.gif" />
+    <Content Include="KHImage\ESMMotorJapan.gif" />
+    <Content Include="KHImage\ESMMotorKorea.gif" />
+    <Content Include="KHImage\ESMMotorTaiwan.gif" />
+    <Content Include="KHImage\ETS-AMotorChina.gif" />
+    <Content Include="KHImage\ETS-AMotorEnglish.gif" />
+    <Content Include="KHImage\ETS-AMotorJapan.gif" />
+    <Content Include="KHImage\ETS-AMotorKorea.gif" />
+    <Content Include="KHImage\ETS-AMotorTaiwan.gif" />
+    <Content Include="KHImage\ETS-FMotorChina.gif" />
+    <Content Include="KHImage\ETS-FMotorEnglish.gif" />
+    <Content Include="KHImage\ETS-FMotorJapan.gif" />
+    <Content Include="KHImage\ETS-FMotorKorea.gif" />
+    <Content Include="KHImage\ETS-FMotorTaiwan.gif" />
+    <Content Include="KHImage\ETS-GMotorChina.gif" />
+    <Content Include="KHImage\ETS-GMotorEnglish.gif" />
+    <Content Include="KHImage\ETS-GMotorJapan.gif" />
+    <Content Include="KHImage\ETS-GMotorKorea.gif" />
+    <Content Include="KHImage\ETS-GMotorTaiwan.gif" />
+    <Content Include="KHImage\ETS-PMotorChina.gif" />
+    <Content Include="KHImage\ETS-PMotorEnglish.gif" />
+    <Content Include="KHImage\ETS-PMotorJapan.gif" />
+    <Content Include="KHImage\ETS-PMotorKorea.gif" />
+    <Content Include="KHImage\ETS-PMotorTaiwan.gif" />
+    <Content Include="KHImage\IAVBPortPosition.gif" />
+    <Content Include="KHImage\smc\1.png" />
+    <Content Include="KHImage\smc\2.png" />
+    <Content Include="KHImage\smc\actuators.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="KHImage\smc\fittings_and_tubing.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="KHImage\smc\ic_folder_close.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="KHImage\smc\ic_folder_open.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Main.aspx" />
+    <Content Include="KHImage\arrow.png" />
+    <Content Include="KHImage\CMK2RodN1.gif" />
+    <Content Include="KHImage\CMK2RodN11-N13.gif" />
+    <Content Include="KHImage\CMK2RodN11.gif" />
+    <Content Include="KHImage\CMK2RodN12.gif" />
+    <Content Include="KHImage\CMK2RodN13-N11.gif" />
+    <Content Include="KHImage\CMK2RodN13.gif" />
+    <Content Include="KHImage\CMK2RodN14.gif" />
+    <Content Include="KHImage\CMK2RodN15.gif" />
+    <Content Include="KHImage\CMK2RodN2.gif" />
+    <Content Include="KHImage\CMK2RodN21.gif" />
+    <Content Include="KHImage\CMK2RodN3.gif" />
+    <Content Include="KHImage\CMK2RodN31.gif" />
+    <Content Include="KHImage\ETSMotorChina.gif" />
+    <Content Include="KHImage\ETSMotorEnglish.gif" />
+    <Content Include="KHImage\ETSMotorJapan.gif" />
+    <Content Include="KHImage\ETSMotorKorea.gif" />
+    <Content Include="KHImage\ETSMotorTaiwan.gif" />
+    <Content Include="KHImage\FixedMessage1.gif" />
+    <Content Include="KHImage\FixedMessage2.gif" />
+    <Content Include="KHImage\JSC3RodN1%28FA%29.gif" />
+    <Content Include="KHImage\JSC3RodN1.gif" />
+    <Content Include="KHImage\JSC3RodN11%28FA%29.gif" />
+    <Content Include="KHImage\JSC3RodN11.gif" />
+    <Content Include="KHImage\JSC3RodN12%28FA%29.gif" />
+    <Content Include="KHImage\JSC3RodN12.gif" />
+    <Content Include="KHImage\JSC3RodN13%28FA%29.gif" />
+    <Content Include="KHImage\JSC3RodN13.gif" />
+    <Content Include="KHImage\JSC3RodN14%28FA%29.gif" />
+    <Content Include="KHImage\JSC3RodN14.gif" />
+    <Content Include="KHImage\JSC3RodN15%28FA%29.gif" />
+    <Content Include="KHImage\JSC3RodN15.gif" />
+    <Content Include="KHImage\JSC3RodN2%28FA%29.gif" />
+    <Content Include="KHImage\JSC3RodN2.gif" />
+    <Content Include="KHImage\JSC3RodN21%28FA%29.gif" />
+    <Content Include="KHImage\JSC3RodN21.gif" />
+    <Content Include="KHImage\JSC3RodN3%28FA%29.gif" />
+    <Content Include="KHImage\JSC3RodN3.gif" />
+    <Content Include="KHImage\JSC3RodN31%28FA%29.gif" />
+    <Content Include="KHImage\JSC3RodN31.gif" />
+    <Content Include="KHImage\LCGStop.gif" />
+    <Content Include="KHImage\LCRStop.gif" />
+    <Content Include="KHImage\Loading.gif" />
+    <Content Include="KHImage\logo.bmp" />
+    <Content Include="KHImage\logo1.gif" />
+    <Content Include="KHImage\logo2.gif" />
+    <Content Include="KHImage\logo3.gif" />
+    <Content Include="KHImage\logo4.gif" />
+    <Content Include="KHImage\logo4.jpg" />
+    <Content Include="KHImage\outOp1.gif" />
+    <Content Include="KHImage\outOp2.gif" />
+    <Content Include="KHImage\outOp3.gif" />
+    <Content Include="KHImage\outOp4.gif" />
+    <Content Include="KHImage\outOp5_JSC3_1.gif" />
+    <Content Include="KHImage\outOp5_JSC3_2.gif" />
+    <Content Include="KHImage\outOp5_SCS.gif" />
+    <Content Include="KHImage\SCA2RodN1.gif" />
+    <Content Include="KHImage\SCA2RodN11.gif" />
+    <Content Include="KHImage\SCA2RodN11N13.gif" />
+    <Content Include="KHImage\SCA2RodN12.gif" />
+    <Content Include="KHImage\SCA2RodN13.gif" />
+    <Content Include="KHImage\SCA2RodN13N11.gif" />
+    <Content Include="KHImage\SCA2RodN14.gif" />
+    <Content Include="KHImage\SCA2RodN15.gif" />
+    <Content Include="KHImage\SCA2RodN2.gif" />
+    <Content Include="KHImage\SCA2RodN21.gif" />
+    <Content Include="KHImage\SCA2RodN3.gif" />
+    <Content Include="KHImage\SCA2RodN31.gif" />
+    <Content Include="KHImage\SCSRodN1.gif" />
+    <Content Include="KHImage\SCSRodN11.gif" />
+    <Content Include="KHImage\SCSRodN12.gif" />
+    <Content Include="KHImage\SCSRodN13.gif" />
+    <Content Include="KHImage\SCSRodN13N11.gif" />
+    <Content Include="KHImage\SCSRodN14.gif" />
+    <Content Include="KHImage\SCSRodN15.gif" />
+    <Content Include="KHImage\SCSRodN2.gif" />
+    <Content Include="KHImage\SCSRodN21.gif" />
+    <Content Include="KHImage\SCSRodN3.gif" />
+    <Content Include="KHImage\SCSRodN31.gif" />
+    <Content Include="KHImage\SSDRodN1.gif" />
+    <Content Include="KHImage\SSDRodN11.gif" />
+    <Content Include="KHImage\SSDRodN11N13.gif" />
+    <Content Include="KHImage\SSDRodN12.gif" />
+    <Content Include="KHImage\SSDRodN13.gif" />
+    <Content Include="KHImage\SSDRodN13N11.gif" />
+    <Content Include="KHImage\SSDRodN14.gif" />
+    <Content Include="KHImage\SSDRodN15.gif" />
+    <Content Include="KHImage\SSDRodN2.gif" />
+    <Content Include="KHImage\SSDRodN21.gif" />
+    <Content Include="KHImage\SSDRodN3.gif" />
+    <Content Include="KHImage\SSDRodN31.gif" />
+    <Content Include="Scripts\JSKatabanTest.js" />
+    <Content Include="Scripts\JSMaster.js" />
+    <Content Include="Scripts\JSOutOfOption.js" />
+    <Content Include="Scripts\JSRodEnd.js" />
+    <Content Include="Scripts\JSSiyou.js" />
+    <Content Include="Scripts\JSTankaISO.js" />
+    <Content Include="Scripts\JSYouso.js" />
+    <None Include="DAL\DataSet\DS_PriceDetail.xsc">
+      <DependentUpon>DS_PriceDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_PriceDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PriceDetail.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\DataSet\DS_PriceDetail.xss">
+      <DependentUpon>DS_PriceDetail.xsd</DependentUpon>
+    </None>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold01.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold02.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold03.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold04.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold05.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold06.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold07.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold08.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold09.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold10.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold11.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold12.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold13.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold14.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold15.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold16.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ManifoldExport\Templates\Katahiki\Manifold17.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DAL\DataSet\DS_TypeAnonymous.xsc">
+      <DependentUpon>DS_TypeAnonymous.xsd</DependentUpon>
+    </Content>
+    <None Include="DAL\DataSet\DS_TypeAnonymous.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TypeAnonymous.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="DAL\DataSet\DS_TypeAnonymous.xss">
+      <DependentUpon>DS_TypeAnonymous.xsd</DependentUpon>
+    </Content>
+    <None Include="ManifoldExport\Templates\P3\Manifold.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold01.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold02.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold03.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold04.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold05.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold06.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold07.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold08.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold09.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold10.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold11.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold12.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold13.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold14.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold15.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold16.xlsx" />
+    <None Include="ManifoldExport\Templates\P3\Manifold17.xlsx" />
+    <None Include="My Project\DataSources\System.Data.DataTable.datasource" />
+    <Content Include="packages.config" />
+    <None Include="Service References\WsJuchuEDI\configuration91.svcinfo" />
+    <None Include="Service References\WsJuchuEDI\configuration.svcinfo" />
+    <None Include="Service References\WsJuchuEDI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WcfKatahikiRenkei\KatahikiRenkeiService.disco" />
+    <Content Include="WebUserControl\Web2Cad.html" />
+    <Content Include="WebUserControl\MessagePage.htm" />
+    <Content Include="WebUserControl\WebUCRodEnd.ascx" />
+    <Content Include="Scripts\jquery-1.11.1.min.js" />
+    <Content Include="Scripts\JSTanka.js" />
+    <Content Include="Scripts\JSCommon.js" />
+    <None Include="DAL\DataSet\DS_100Test.xsc">
+      <DependentUpon>DS_100Test.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_100Test.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_100Test.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\DataSet\DS_100Test.xss">
+      <DependentUpon>DS_100Test.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_History.xsc">
+      <DependentUpon>DS_History.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_History.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_History.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\DataSet\DS_History.xss">
+      <DependentUpon>DS_History.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_KatOut.xsc">
+      <DependentUpon>DS_KatOut.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_KatOut.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_KatOut.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\DataSet\DS_KatOut.xss">
+      <DependentUpon>DS_KatOut.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_KatSep.xsc">
+      <DependentUpon>DS_KatSep.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_KatSep.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_KatSep.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\DataSet\DS_KatSep.xss">
+      <DependentUpon>DS_KatSep.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_Master.xsc">
+      <DependentUpon>DS_Master.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_Master.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Master.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\DataSet\DS_Master.xss">
+      <DependentUpon>DS_Master.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_M_User.xsc">
+      <DependentUpon>DS_M_User.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_M_User.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_M_User.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\DataSet\DS_M_User.xss">
+      <DependentUpon>DS_M_User.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_PriceTest.xsc">
+      <DependentUpon>DS_PriceTest.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_PriceTest.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PriceTest.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\DataSet\DS_PriceTest.xss">
+      <DependentUpon>DS_PriceTest.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_Tanka.xsc">
+      <DependentUpon>DS_Tanka.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_Tanka.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Tanka.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\DataSet\DS_Tanka.xss">
+      <DependentUpon>DS_Tanka.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_Youso.xsc">
+      <DependentUpon>DS_Youso.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\DataSet\DS_Youso.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Youso.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\DataSet\DS_Youso.xss">
+      <DependentUpon>DS_Youso.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Scripts\JSType.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Styles\Style.css" />
+    <Content Include="TempFiles\Dummy.txt" />
+    <None Include="Service References\WsJuchuEDI\DSMDeptDenno.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSMEndUserCnv.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSMItem.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSMKATAHIKI.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSMKensakuJoken.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSMMKisyu.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSMNijiSyosyaCnv.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSMOrderItem.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSMSPPrice.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSMSystem.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSMTansyuku.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSMTokuisakiCnv.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSTBatchLog.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSTChumon.xsd" />
+    <None Include="Service References\WsJuchuEDI\DstChumonCnt.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSTJuchu.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSTJuchuRirekiList.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSTKikan.xsd" />
+    <None Include="Service References\WsJuchuEDI\DSTSenko.xsd" />
+    <None Include="Service References\WsJuchuEDI\ServiceDBIO.wsdl" />
+    <None Include="Service References\WsJuchuEDI\ServiceDBIO.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsJuchuEDI\ServiceDBIO1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsJuchuEDI\ServiceDBIO2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsJuchuEDI\ServiceDBIO3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsJuchuEDI\ServiceDBIO4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSMDeptDenno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSMEndUserCnv.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSMItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSMKATAHIKI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSMKensakuJoken.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSMMKisyu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSMNijiSyosyaCnv.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSMOrderItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSMSPPrice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSMSystem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSMTansyuku.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSMTokuisakiCnv.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSTBatchLog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSTChumon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DstChumonCnt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSTJuchu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSTJuchuRirekiList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSTKikan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsJuchuEDI\WebKataban.WsJuchuEDI.DSTSenko.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Web References\WcfKatahikiRenkei\KatahikiRenkeiService.wsdl" />
+    <None Include="Web References\WcfKatahikiRenkei\KatahikiRenkeiService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WcfKatahikiRenkei\KatahikiRenkeiService0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WcfKatahikiRenkei\KatahikiRenkeiService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WcfKatahikiRenkei\MItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WcfKatahikiRenkei\QuantityUnit.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WcfKatahikiRenkei\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WcfKatahikiRenkei\SelectCatalog.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WcfKatahikiRenkei\StandardNouki.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\weblogin\logincheck.disco" />
+    <None Include="Web References\WSKatahikirenkei\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\WSKatahikirenkei\Service.wsdl" />
+    <None Include="Web References\WSKatahikirenkei\StandardNoki.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WSKatahikirenkei\Service.disco" />
+    <Content Include="WebUserControl\UC_ISOTanka.ascx" />
+    <Content Include="WebUserControl\WebUC_Error.ascx" />
+    <Content Include="WebUserControl\WebUC_ISOTanka.ascx" />
+    <Content Include="WebUserControl\WebUC_Login.ascx" />
+    <Content Include="WebUserControl\WebUC_Master.ascx" />
+    <Content Include="WebUserControl\WebUC_Menu.ascx" />
+    <Content Include="WebUserControl\WebUC_Motor.ascx" />
+    <Content Include="WebUserControl\WebUC_OutOfOption.ascx" />
+    <Content Include="WebUserControl\WebUC_PriceCopy.ascx" />
+    <Content Include="WebUserControl\WebUC_PriceDetail.ascx" />
+    <Content Include="WebUserControl\WebUC_RodEnd.ascx" />
+    <Content Include="WebUserControl\WebUC_RodEndOrder.ascx" />
+    <Content Include="WebUserControl\WebUC_Siyou.ascx" />
+    <Content Include="WebUserControl\WebUC_Stopper.ascx" />
+    <Content Include="WebUserControl\WebUC_Tanka.ascx" />
+    <Content Include="WebUserControl\WebUC_TEST\WebUC_100Test.ascx" />
+    <Content Include="WebUserControl\WebUC_TEST\WebUC_KatOut.ascx" />
+    <Content Include="WebUserControl\WebUC_TEST\WebUC_KatSep.ascx" />
+    <Content Include="WebUserControl\WebUC_Type.ascx" />
+    <Content Include="WebUserControl\WebUC_TypeAnonymous.ascx" />
+    <Content Include="WebUserControl\WebUC_Youso.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebUserControl\Master_Main.Master" />
+    <None Include="Web References\weblogin\logincheck.wsdl" />
+    <None Include="Web References\weblogin\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\KHBusinessLogic\LabelBLL.vb" />
+    <Compile Include="BLL\KHBusinessLogic\LoginBLL.vb" />
+    <Compile Include="BLL\KHBusinessLogic\MenuBLL.vb" />
+    <Compile Include="BLL\KHBusinessLogic\SiyouBLL.vb" />
+    <Compile Include="BLL\KHBusinessLogic\TankaBLL.vb" />
+    <Compile Include="BLL\KHBusinessLogic\TypeBLL.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHCylinderSTSCheck.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceS2.vb" />
+    <Compile Include="Classes\KHCountry.vb" />
+    <Compile Include="Classes\KHExcelCtl.vb" />
+    <Compile Include="Classes\KHPlace.vb" />
+    <Compile Include="Classes\KHSBOInterface.vb" />
+    <Compile Include="Common\Method\ClsCommon.vb" />
+    <Compile Include="Common\ExtendedControls\CtlCharText.vb" />
+    <Compile Include="Common\ExtendedControls\CtlNumText.vb" />
+    <Compile Include="DAL\CountryDAL.vb" />
+    <Compile Include="DAL\DataSet\DS_M_User.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_M_User.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataSet\DS_PriceDetail.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PriceDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataSet\DS_PriceTest.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PriceTest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataSet\DS_Tanka.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Tanka.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataSet\DS_TypeAnonymous.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TypeAnonymous.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DefaultDAL.vb" />
+    <Compile Include="DAL\KtbnStrcDAL.vb" />
+    <Compile Include="DAL\MasterDAL.vb" />
+    <Compile Include="DAL\M_KatabanDAL.vb" />
+    <Compile Include="DAL\OutOfOptionDAL.vb" />
+    <Compile Include="DAL\StdDlvDAL.vb" />
+    <Compile Include="DAL\SystemDAL.vb" />
+    <Compile Include="DAL\TankaISODAL.vb" />
+    <Compile Include="DAL\KatabanDAL.vb" />
+    <Compile Include="DAL\LabelDAL.vb" />
+    <Compile Include="DAL\LoginDAL.vb" />
+    <Compile Include="DAL\MenuDAL.vb" />
+    <Compile Include="DAL\SiyouDAL.vb" />
+    <Compile Include="DAL\UnitPriceDAL.vb" />
+    <Compile Include="DAL\TypeDAL.vb" />
+    <Compile Include="DAL\YousoDAL.vb" />
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Models\KHAccPriceModel.vb" />
+    <Compile Include="Models\KHInfoModel.vb" />
+    <Compile Include="Classes\KHBase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Constants\KHCodeConstants.vb" />
+    <Compile Include="Classes\KHKataban.vb" />
+    <Compile Include="Models\KHSeriesSearch.vb" />
+    <Compile Include="Classes\KHKtbnStrc.vb" />
+    <Compile Include="Classes\KHLabelCtl.vb" />
+    <Compile Include="Classes\KHManifold.vb" />
+    <Compile Include="Models\KHSessionInfo.vb" />
+    <Compile Include="Classes\KHStdDlv.vb" />
+    <Compile Include="BLL\KHBusinessLogic\TankaISOBLL.vb" />
+    <Compile Include="Classes\KHCombinationOut.vb" />
+    <Compile Include="Classes\KHKatabanSeparator.vb" />
+    <Compile Include="BLL\KHBusinessLogic\DefaultBLL.vb" />
+    <Compile Include="BLL\KHBusinessLogic\MasterBLL.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_00.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_01.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_02.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_03.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_04.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_05.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_06.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_07.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_08.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_09.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_10.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_11.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_12.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_13.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_14.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_15.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_16.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_17.vb" />
+    <Compile Include="BLL\KHManifoldCheck\ClsInputCheck_18.vb" />
+    <Compile Include="DAL\DataSet\DS_100Test.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_100Test.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataSet\DS_History.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_History.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataSet\DS_KatOut.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_KatOut.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataSet\DS_KatSep.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_KatSep.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataSet\DS_Master.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Master.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataSet\DS_Youso.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Youso.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\KHOptionCheck\KHAirValveCheck.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHCylinderC5Check.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHCylinderCheck.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHCylinderCMK2Check.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHCylinderFRLCheck.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHCylinderJSC3Check.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHCylinderSCA2Check.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHCylinderSCMCheck.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHCylinderSSD2Check.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHCylinderSSDCheck.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHCylinderStrokeCheck.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHGasCheck.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHNewHandleCheck.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHOtherCheck.vb" />
+    <Compile Include="BLL\KHOptionCheck\KHWaterValveCheck.vb" />
+    <Compile Include="Classes\KHOptionCtl.vb" />
+    <Compile Include="Classes\KHOutOfOptionCstm.vb" />
+    <Compile Include="Classes\KHRodEndCstm.vb" />
+    <Compile Include="Classes\KHSystem.vb" />
+    <Compile Include="Classes\KHUser.vb" />
+    <Compile Include="BLL\KHBusinessLogic\YousoBLL.vb" />
+    <Compile Include="Main.aspx.designer.vb">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.vb">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice01.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice02.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice03.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice04.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice05.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice06.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice07.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice08.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice09.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice10.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice11.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice12.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice13.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice14.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice15.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice16.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice17.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice18.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice19.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice20.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice21.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice22.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice23.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice24.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice25.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice26.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice27.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice28.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice29.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice30.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice31.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice32.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice33.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice34.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice35.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice36.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice37.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice38.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice39.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice40.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice41.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice42.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice43.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice44.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice45.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice46.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice47.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice48.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice49.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice50.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice51.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice52.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice53.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice54.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice55.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice56.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice57.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice58.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice59.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice60.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice61.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice62.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice63.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice64.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice65.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice66.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice67.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice68.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice69.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice70.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice71.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice72.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice73.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice74.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice75.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice76.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice77.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice78.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice79.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice80.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice81.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice82.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice83.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice84.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice85.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice86.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice87.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice88.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice89.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice90.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice91.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice92.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice93.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice94.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice95.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice96.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice97.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice98.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPrice99.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceA0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceA1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceA2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceA3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceA4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceA5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceA6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceA7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceA8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceA9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceB0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceB1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceB2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceB3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceB4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceB5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceB6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceB7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceB8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceB9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceC0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceC1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceC2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceC3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceC4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceC5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceC6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceC7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceC8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceC9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceD0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceD1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceD2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceD3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceD4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceD5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceD6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceD7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceD8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceD9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceE0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceE1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceE2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceE3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceE4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceE5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceE6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceE7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceE8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceE9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceF0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceF1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceF2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceF3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceF4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceF5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceF6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceF7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceF8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceF9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceG0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceG1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceG2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceG3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceG4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceG5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceG6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceG7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceG8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceG9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceH0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceH1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceH2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceH3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceH4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceH5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceH6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceH7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceH8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceH9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceI0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceI1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceI2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceI3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceI4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceI5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceI6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceI7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceI8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceI9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceJ0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceJ1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceJ2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceJ3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceJ4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceJ5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceJ6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceJ7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceJ8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceJ9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceK0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceK1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceK2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceK3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceK4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceK5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceK6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceK7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceK8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceK9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceL0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceL1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceL2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceL3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceL4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceL5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceL6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceL7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceL8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceL9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceM0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceM1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceM2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceM3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceM4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceM5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceM6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceM7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceM8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceM9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceN0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceN1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceN2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceN3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceN4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceN5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceN6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceN7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceN8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceN9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceO0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceO1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceO2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceO3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceO5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceO6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceO7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceO8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceO9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceOA.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceP0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceP1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceP2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceP3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceP4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceP5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceP6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceP7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceP8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceP9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceQ0.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceQ1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceQ2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceQ3.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceQ4.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceQ5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceQ6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceQ7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceQ8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceQ9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceR1.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceR2.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceR5.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceR6.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceR7.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceR8.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceR9.vb" />
+    <Compile Include="BLL\KHPriceAccumulate\KHPriceS1.vb" />
+    <Compile Include="Classes\KHUnitPrice.vb" />
+    <Compile Include="Service References\WsJuchuEDI\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WcfKatahikiRenkei\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUCRodEnd.ascx.designer.vb">
+      <DependentUpon>WebUCRodEnd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUCRodEnd.ascx.vb">
+      <DependentUpon>WebUCRodEnd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web References\weblogin\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSKatahikirenkei\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\Master_Main.Master.designer.vb">
+      <DependentUpon>Master_Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\Master_Main.Master.vb">
+      <DependentUpon>Master_Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\UC_ISOTanka.ascx.designer.vb">
+      <DependentUpon>UC_ISOTanka.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\UC_ISOTanka.ascx.vb">
+      <DependentUpon>UC_ISOTanka.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Error.ascx.designer.vb">
+      <DependentUpon>WebUC_Error.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Error.ascx.vb">
+      <DependentUpon>WebUC_Error.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_ISOTanka.ascx.designer.vb">
+      <DependentUpon>WebUC_ISOTanka.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_ISOTanka.ascx.vb">
+      <DependentUpon>WebUC_ISOTanka.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Login.ascx.designer.vb">
+      <DependentUpon>WebUC_Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Login.ascx.vb">
+      <DependentUpon>WebUC_Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Master.ascx.designer.vb">
+      <DependentUpon>WebUC_Master.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Master.ascx.vb">
+      <DependentUpon>WebUC_Master.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Menu.ascx.designer.vb">
+      <DependentUpon>WebUC_Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Menu.ascx.vb">
+      <DependentUpon>WebUC_Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Motor.ascx.designer.vb">
+      <DependentUpon>WebUC_Motor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Motor.ascx.vb">
+      <DependentUpon>WebUC_Motor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_OutOfOption.ascx.designer.vb">
+      <DependentUpon>WebUC_OutOfOption.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_OutOfOption.ascx.vb">
+      <DependentUpon>WebUC_OutOfOption.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_PriceCopy.ascx.designer.vb">
+      <DependentUpon>WebUC_PriceCopy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_PriceCopy.ascx.vb">
+      <DependentUpon>WebUC_PriceCopy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_PriceDetail.ascx.designer.vb">
+      <DependentUpon>WebUC_PriceDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_PriceDetail.ascx.vb">
+      <DependentUpon>WebUC_PriceDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_RodEnd.ascx.designer.vb">
+      <DependentUpon>WebUC_RodEnd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_RodEnd.ascx.vb">
+      <DependentUpon>WebUC_RodEnd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_RodEndOrder.ascx.designer.vb">
+      <DependentUpon>WebUC_RodEndOrder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_RodEndOrder.ascx.vb">
+      <DependentUpon>WebUC_RodEndOrder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Siyou.ascx.designer.vb">
+      <DependentUpon>WebUC_Siyou.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Siyou.ascx.vb">
+      <DependentUpon>WebUC_Siyou.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Stopper.ascx.designer.vb">
+      <DependentUpon>WebUC_Stopper.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Stopper.ascx.vb">
+      <DependentUpon>WebUC_Stopper.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Tanka.ascx.designer.vb">
+      <DependentUpon>WebUC_Tanka.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Tanka.ascx.vb">
+      <DependentUpon>WebUC_Tanka.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_TEST\ManifoldKataban.vb" />
+    <Compile Include="WebUserControl\WebUC_TEST\WebUC_100Test.ascx.designer.vb">
+      <DependentUpon>WebUC_100Test.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_TEST\WebUC_100Test.ascx.vb">
+      <DependentUpon>WebUC_100Test.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_TEST\WebUC_KatOut.ascx.designer.vb">
+      <DependentUpon>WebUC_KatOut.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_TEST\WebUC_KatOut.ascx.vb">
+      <DependentUpon>WebUC_KatOut.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_TEST\WebUC_KatSep.ascx.designer.vb">
+      <DependentUpon>WebUC_KatSep.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_TEST\WebUC_KatSep.ascx.vb">
+      <DependentUpon>WebUC_KatSep.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Type.ascx.designer.vb">
+      <DependentUpon>WebUC_Type.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Type.ascx.vb">
+      <DependentUpon>WebUC_Type.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_TypeAnonymous.ascx.designer.vb">
+      <DependentUpon>WebUC_TypeAnonymous.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_TypeAnonymous.ascx.vb">
+      <DependentUpon>WebUC_TypeAnonymous.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Youso.ascx.designer.vb">
+      <DependentUpon>WebUC_Youso.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl\WebUC_Youso.ascx.vb">
+      <DependentUpon>WebUC_Youso.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Packages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/wskatahikirenkei/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSKatahikirenkei\</RelPath>
+      <UpdateFromURL>http://localhost/wskatahikirenkei/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebKataban_WSKatahikirenkei_WSKatahikiRenkei</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://sv413/WcfKatahikiRenkei/KatahikiRenkeiService.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WcfKatahikiRenkei\</RelPath>
+      <UpdateFromURL>http://sv413/WcfKatahikiRenkei/KatahikiRenkeiService.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebKataban_WcfKatahikiRenkei_KatahikiRenkeiService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://www21.ckd.co.jp/weblogin_test/logincheck.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\weblogin\</RelPath>
+      <UpdateFromURL>https://www21.ckd.co.jp/weblogin_test/logincheck.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebKataban_weblogin_LoginCheck</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WsJuchuEDI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5371</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DSTJuchuRirekiList.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DSTJuchuRirekiList.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DSTJuchuRirekiList.xsd" id="DSTJuchuRirekiList" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DSTJuchuRirekiList">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="JuchuRirekiList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="伝票NO" type="xs:string" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="担当者" type="xs:string" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="得意先" type="xs:string" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="ご注文書NO" type="xs:string" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="ご注文形番" type="xs:string" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="ご注文数量" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="ご注文単価" type="xs:int" />
+              <xs:element minOccurs="0" name="変更内容" type="xs:string" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="手配形番" type="xs:string" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="手配数量" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="手配単価" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="GS単価" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="備考" type="xs:string" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="売上部署" type="xs:string" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="注文書受信日時" type="xs:string" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="受注確定日時" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

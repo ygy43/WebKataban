@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebKataban", "WebKataban", "{764D7FC1-E839-4543-88C8-0264A11193F1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WebKataban", "WebKataban\WebKataban.vbproj", "{6C07D4CA-AA3D-4542-ABAC-F24DC6835BE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C07D4CA-AA3D-4542-ABAC-F24DC6835BE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C07D4CA-AA3D-4542-ABAC-F24DC6835BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C07D4CA-AA3D-4542-ABAC-F24DC6835BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C07D4CA-AA3D-4542-ABAC-F24DC6835BE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6C07D4CA-AA3D-4542-ABAC-F24DC6835BE1} = {764D7FC1-E839-4543-88C8-0264A11193F1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE345078-6297-4566-861F-73FDFB95DF67}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://nkcs:8080/tfs/ckd%20projects
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WebKataban\\WebKataban.vbproj
+		SccProjectTopLevelParentUniqueName1 = WebKataban.sln
+		SccProjectName1 = WebKataban
+		SccLocalPath1 = WebKataban
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = WebKataban.vsmdi
+	EndGlobalSection
+EndGlobal

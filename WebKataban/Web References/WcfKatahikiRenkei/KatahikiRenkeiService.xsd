@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfKatahikiRenkei.Results" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfKatahikiRenkei.Results" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="StandardNouki">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullKataban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="QuantityDisp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StdDate" type="xs:int" />
+      <xs:element minOccurs="0" name="StdDateDisp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZaikoFlg" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StandardNouki" nillable="true" type="tns:StandardNouki" />
+  <xs:complexType name="QuantityUnit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HasQuantityUnit" type="xs:boolean" />
+      <xs:element minOccurs="0" name="QuantityUnitName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantityUnitNameDefault" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuantityUnit" nillable="true" type="tns:QuantityUnit" />
+  <xs:complexType name="SelectCatalog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DispKosu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DispNoki" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KaitoufukaKbn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kataban" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kosu" type="xs:int" />
+      <xs:element minOccurs="0" name="MsgKbn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Noki" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectCatalog" nillable="true" type="tns:SelectCatalog" />
+  <xs:complexType name="MItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemRecords" nillable="true" type="tns:ArrayOfMItemRecord" />
+      <xs:element minOccurs="0" name="SpecNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MItem" nillable="true" type="tns:MItem" />
+  <xs:complexType name="ArrayOfMItemRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MItemRecord" nillable="true" type="tns:MItemRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMItemRecord" nillable="true" type="tns:ArrayOfMItemRecord" />
+  <xs:complexType name="MItemRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemCount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LabelContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZokuseiCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MItemRecord" nillable="true" type="tns:MItemRecord" />
+</xs:schema>

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>説明</title>
+</head>
+
+<body style="height: 456px; width: 430px">                               
+
+    <div style="font-size: 14pt; height: 26px;" id="Div1"></div>
+    <div style="font-size: 14pt; height: 26px;" id="Div2"></div>
+    <div style="font-size: 14pt; height: 26px;" id="Div3"></div>
+    <div style="font-size: 14pt; height: 26px;" id="Div4"></div>
+    <div style="font-size: 14pt; height: 26px;" id="Div5"></div>
+    <div style="font-size: 14pt; height: 26px;" id="Div6"></div>
+    <div style="font-size: 14pt; height: 26px;" id="Div7"></div>
+    <div style="font-size: 14pt; height: 26px;" id="Div8"></div>
+    <div style="font-size: 14pt; height: 26px;" id="Div9"></div>
+    <div style="font-size: 14pt; height: 26px;" id="Div10"></div>
+    <div style="font-size: 14pt; height: 52px;" id="Div11"></div>
+    <div style="font-size: 14pt; height: 26px;" id="Div12"></div>
+    <div style="font-size: 14pt; height: 26px;" id="Div13"></div>
+    <div style="font-size: 14pt; height: 26px;" id="Div14"></div>
+    <div style="font-size: 14pt; height: 26px;" id="Div15"></div>
+
+    <script language="javascript" type="text/javascript">
+
+        var str = location.search.substring(1);       
+        if (str == "ja") {
+            Meg = ["プラント", "1002 小牧工場", "1003 犬山工場", "1004 春日井工場", "1005 四日市工場"
+            , "保管場所", "G000 GLC", "A*** 本ストア", "評価タイプ(CKD日本出荷品が複数国で生産されている場合の識別)"
+            , "JP1 日本", "CN1 中国より仕入", "TH1 タイより仕入"];
+        }
+        else if (str == "en") {
+            Meg = ["Plant", "1002 Komaki plant", "1003 Inuyama plant", "1004 Kasugai plant", "1005 Yokkaichi plant"
+            , "Storage Location", "G000 GLC", "A*** Location code", "Evaluation (Identification codes for products shipped from CKD Japan if they are made in multiple countries) "
+            , "JP1 Japan", "CN1 Purchased from China", "TH1 Purchased from Thailand"];
+        }
+        else if (str == "ko") {
+            Meg = ["플랜트", "1002 고마키 공장", "1003 이누야마 공장", "1004 가스가이 공장", "1005 욧카이치 공장"
+            , "보관 장소", "G000 GLC", "A*** 본 스토어", "평가 타입(CKD 일본 출하품이 복수국에서 생산되고 있는 경우의 식별)"
+            ,"JP1 일본","CN1 중국에서 매입","TH1 중국에서 매입"];
+        }
+        else if (str == "tw") {
+            Meg = ["工廠", "1002 小牧工廠", "1003 犬山工廠", "1004 春日井工廠", "1005 四日市工廠"
+            , "保管場所", "G000 GLC", "A*** 本store", "評價型(CKD日本出貨產品於其他國家生產時之辨識)"
+            , "JP1 日本", "CN1 從中國供貨", "TH1 從泰國供貨"];
+        }
+        else if (str == "zh") {
+            Meg = ["工厂", "1002 小牧工厂", "1003 犬山工厂", "1004 春日井工厂", "1005 四日市工厂"
+            , "保管场所", "G000 GLC", "A*** 总仓库", "评价类型(CKD日本出货品为多个国家生产时的区别)"
+            , "JP1 日本", "CN1 从中国进货", "TH1 从泰国进货"];
+        }
+        else
+        {           
+        }
+        var elem = document.getElementById("Div1");
+        elem.innerHTML = Meg[0];
+        var elem = document.getElementById("Div2");
+        elem.innerHTML = Meg[1];
+        var elem = document.getElementById("Div3");
+        elem.innerHTML = Meg[2];
+        var elem = document.getElementById("Div4");
+        elem.innerHTML = Meg[3];
+        var elem = document.getElementById("Div5");
+        elem.innerHTML = Meg[4];
+        var elem = document.getElementById("Div7");
+        elem.innerHTML = Meg[5];
+        var elem = document.getElementById("Div8");
+        elem.innerHTML = Meg[6];
+        var elem = document.getElementById("Div9");
+        elem.innerHTML = Meg[7];
+        var elem = document.getElementById("Div11");
+        elem.innerHTML = Meg[8];
+        var elem = document.getElementById("Div12");
+        elem.innerHTML = Meg[9];
+        var elem = document.getElementById("Div13");
+        elem.innerHTML = Meg[10];
+        var elem = document.getElementById("Div14");
+        elem.innerHTML = Meg[11];
+
+    </script>
+
+</body>
+
+</html>

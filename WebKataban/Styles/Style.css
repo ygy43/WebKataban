@@ -1,0 +1,930 @@
+﻿/****** 共通 ******/
+
+input [type=checkbox] 
+{
+    margin: 0px;
+}
+
+.verticalMiddle
+{
+    line-height: 18px;
+    vertical-align: middle;
+}
+.center
+{
+    text-align: center;
+}
+
+.right
+{
+    text-align: right;
+}
+
+.left
+{
+    text-align: left;
+}
+
+.displaynone
+{
+    display: none;
+}
+
+.mainContainer
+{
+    width: 100%;
+    border-style: none;
+    background-color: #C7EDCC;
+    font-family: "ＭＳ ゴシック";
+    padding: 0px 0px 10px 0px;
+}
+
+.button
+{
+    color:Black;
+    background-color: #CCCCCC;
+    font-weight: bold;
+    font-size: medium;
+    font-family: Calibri;
+    height: 30px;
+}
+
+.DropDownList
+{
+    font-size: 18px;
+    font-family: Calibri;
+    height: 28px;
+}
+
+.loadMessage
+{
+    background-color: White;
+    border-width: 0px;
+    font-size: 36px;
+    padding: 30px;
+    position: fixed;
+    left: 40%;
+    top: 30%;   
+}
+
+.title
+{
+    color: Black;
+    font-weight: bold;
+    font-size:x-large;
+    width: 100%;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.menuBar
+{
+    background-color: #8DC965;
+    padding: 0px 5px 0px 5px;
+    width: 100%;
+}
+
+.gridHeader
+{
+    color: White;
+    background-color: Green;
+    font-size: large;
+    font-weight:bold;
+    height : 25px;
+    line-height: 25px;
+    vertical-align: middle; 
+    width: 98%; 
+}
+
+.gridRow
+{
+    /*height: 20px;*/
+    background-color: White;
+    font-weight:bold;
+}
+
+.gridAltRow
+{
+    /*height: 20px;*/
+    font-weight: bold;
+    background-color: #CCCCFF;
+}
+
+.gridItem
+{
+    font-weight: bold;
+    font-size: medium;
+    height: 20px;
+    text-align: left;
+}
+
+.margin0 {
+    margin: 0;
+}
+/****** ログイン画面 ******/
+.login .title
+{
+    padding: 35px 0px 55px 0px;
+    text-align: center;
+}
+
+.login .authentic
+{
+    background-color: White;
+    border-color: Silver;
+    border-style: solid;
+    border-width: 1px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.login .authentic .panel
+{
+    text-align: left;
+    width: 80%;
+    font-size: large;
+}
+
+.login .authentic .title
+{
+    font-size: large;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+}
+
+.login .authentic .textbox
+{
+    background-color: #FFFFCC;
+    border-color: Silver;
+    border-style: solid;
+    border-width: 1px;
+    font-weight:bold;
+    font-size: large;
+    margin-bottom:10px;
+    text-align: left;
+    width: 120px;
+}
+
+.login .authentic .divButton
+{
+    padding: 10px 0px 10px 0px;
+    text-align: right;
+}
+
+.login .bottom
+{
+    width: 90%;
+    margin-top: 40px;
+}
+
+.login .bottom .label
+{
+    color: Red;
+    font-size: medium;
+}
+
+/****** メニュー画面 ******/
+
+.menu .divTitle
+{
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+.menu .divSubTitle
+{
+    text-align: left;
+    padding-bottom: 5px;
+    width: 80%;
+}
+
+.menu .title
+{
+    font-size: xx-large; 
+}
+
+.menu .grid
+{
+    height: 350px;
+    width: 100%;
+}
+
+.menu .list
+{
+    width: 80%;
+    font-size: medium;
+}
+
+/****** 機種選択画面 ******/
+
+.type .searchPanel
+{
+    border-color: Silver;
+    border-style: solid;
+    border-width: 1px;
+    width: 90%;
+}
+
+.type .searchPanel .label
+{
+    width: 100%;
+    font-size: medium;
+}
+
+.type .searchPanel .text
+{
+    width: 100%;
+    font-size: large;
+    background-color: #FFFFCC;
+    border-color: Silver;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.type .button
+{
+    font-size: medium;
+    width: 100px;
+}
+
+.type .grid
+{
+    width: 90%;
+    cursor: pointer;
+    text-align: center; 
+}
+
+/*.type .gridHeader
+{
+    background-color: Green;
+    font-size: large;
+    font-weight:bold;
+    height : 25px;
+    color: White;
+}
+
+.type .alterRow
+{
+    height: 20px;
+    font-weight: bold;
+    background-color: #CCCCFF;
+}
+
+.type .row
+{
+    
+}*/
+
+.fieldInset
+{
+    /*border-style: inset;
+    border-width: medium;*/
+    border-color: Black;
+    border-width: 1px;
+    vertical-align: middle;
+}
+
+/****** オプション選択画面 ******/
+
+.youso .options
+{
+    width: 98%;
+    text-align: left;
+    vertical-align: middle;
+}
+.youso .textbox
+{
+    height: 19px;
+    width: 0px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.youso .label
+{
+    height: 19px;
+}
+
+.messageYouso
+{
+    padding-top: 3px; 
+    text-align: left;
+}
+
+.youso .message
+{
+    color: Red;
+    font-size: small;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+/*.youso .gridHeader
+{
+    background-color: Green;
+    font-weight:bold;
+    line-height: 25px;
+    vertical-align: middle; 
+    width: 98%; 
+}*/
+
+.youso .grid
+{
+    text-align: left; 
+    width: 98%; 
+    height: 300px; 
+    overflow-x: hidden; 
+    overflow-y: auto;
+    cursor: pointer;
+}
+
+.xPanel
+{
+    margin-top: 3px;
+}
+
+.AMD0X
+{
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: large;
+    width: 80px;
+}
+/****** 仕様場面 ******/
+.siyou .Detail
+{
+    overflow: hidden;
+}
+
+
+/****** 単価画面 ******/
+.tanka .additionInfo
+{
+    border: 1px Solid Silver;
+    width: 98%; 
+    float: inherit; 
+    position: relative;
+}
+
+.tanka .additionCol10
+{
+    width: 10%;
+}
+.tanka .additionCol15
+{
+    width: 15%;
+}
+.tanka .additionCol20
+{
+    width: 20%;
+}
+
+.tanka .additionLabel
+{
+    font-weight: bold;
+    font-size: medium;
+    width: 100%;
+}
+
+.tanka .additionText
+{
+    border: 1px Solid Silver;
+    font-weight: bold;
+    font-size: large;
+    line-height: 20px;
+}
+
+.tanka .placeText
+{
+    border: 1px Solid Silver;
+    color: Black;
+    font-weight: bold;
+    font-size: x-large;
+    padding: 3px 0px 3px 0px;
+    width:100%;
+}
+
+.tanka .placeMessage
+{
+    font-weight: bold;
+    font-size: medium;
+    color: Black;
+    width: 90%;
+}
+
+.tanka .message1
+{
+    font-weight: bold;
+    font-size: small;
+    color: Red;
+    width: 100%;
+}
+
+.tanka .message2
+{
+    font-weight:bold;
+    font-size: medium;
+    color: Red;
+}
+
+.tanka .tableColPrice
+{
+    text-align: center;
+    /*height: 300px;*/
+    vertical-align: top;
+    width: 40%;
+}
+
+.tanka .tableColInfo
+{
+    text-align: center;
+    /*height: 300px;*/
+    vertical-align: top;
+    width: 60%;
+}
+
+.tanka .calculate
+{
+    border: 1px Solid Silver; 
+    width: 100%; 
+    float: inherit; 
+    position: relative;
+}
+
+.tanka .calculateLabel
+{
+    font-weight: bold;
+    font-size: medium;
+    color: Black;
+    width: 100%;
+}
+
+.tanka .calculateText
+{
+    width: 120px;
+    font-weight: bold;
+    font-size: large;
+    background-color: #FFFFCC;
+}
+
+.tanka .calculateTextReadOnly
+{
+    width: 120px;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+.tanka .qtyUnit
+{
+    font-weight: bold;
+    font-size: medium;
+    color: #0099FF;
+    width: 100%;
+}
+
+.tanka .buttonDiv
+{
+    padding-top: 5px;
+    text-align: left;
+}
+
+.tanka .select
+{
+     border: 1px Solid Silver; 
+     width: 100%; 
+     float: inherit; 
+     position: relative;
+}
+
+/****** ISO単価画面 ******/
+.isoTanka .labelTitle
+{
+    background-color: #008000;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 10pt;
+    font-weight: bold;
+    vertical-align: middle;
+    border-style: none;
+    border-width: 0px;
+    height: 15px;
+    padding-top: 2px;
+}
+
+.isoTanka .fixedMessage
+{
+    width: 98%;
+    text-align: right;
+}
+
+.isoTanka .contents
+{
+    width: 98%;
+    text-align: left;
+}
+
+.isoTanka .columnTitle
+{
+    font-weight: bold;
+    color: White;
+    text-align: center;
+    width: 100%;
+    border-style: none;
+}
+
+.isoTanka .numText
+{
+    border: 0px None White;
+    font-weight: bold;
+    font-size: medium;
+    padding: 0px;
+    line-height: 22px;
+    height: 22px;
+    width: 100%;
+}
+
+.isoTanka .priceList
+{
+    height: 470px; 
+    overflow-y: scroll;
+}
+
+.isoTanka .placeText
+{
+    text-align: center;
+    border: 1px Solid Silver;
+    color: Black;
+    font-weight: bold;
+    font-size: x-large;
+    padding: 3px 0px 3px 0px;
+    width:100%;
+}
+
+.isoTanka .additionText
+{
+    border: 1px Solid Silver;
+    font-weight: bold;
+    font-size: large;
+    line-height: 20px;
+}
+
+.isoTanka .additionLabel
+{
+    font-weight: bold;
+    font-size: medium;
+    width: 100%;
+}
+
+.isoTanka .message1
+{
+    font-weight: bold;
+    font-size: small;
+    color: Red;
+    width: 100%;
+}
+/****** ISOユーザコントロール ******/
+.ucIsoTanka .title
+{
+    background-color: Green;
+    font-weight: bold;
+    font-size: 15px;
+    color: White;
+    text-align: left;
+    padding: 0px;
+}
+
+
+.ucIsoTanka .columnTitle
+{
+    background-color: Green;
+    font-weight: bold;
+    font-size: 15px;
+    color: White;
+    text-align: center;
+}
+
+.ucIsoTanka .priceListTable
+{
+    border-style: double; 
+    border-width: 1px; 
+    width: 310px; 
+    vertical-align: bottom;
+}
+
+.ucIsoTanka .label
+{
+    font-weight: bold;
+    color: Black;
+    height: 15px;
+    font-size: small;
+}
+
+.ucIsoTanka .checkBox
+{
+    padding: 0px;
+    margin: 0px;
+    vertical-align: text-bottom;
+}
+
+.ucIsoTanka .textReadOnly
+{
+    height: 15px;
+    font-weight: bold;
+    width: 80px;
+}
+
+.ucIsoTanka .textNum
+{
+    height: 15px;
+    font-weight: bold;
+    width: 80px;
+}
+
+/****** マスタ画面 *******/
+
+.master .title2
+{
+    font-weight: bold;
+    font-size: medium;
+}
+
+
+.master .webLogTitle
+{
+    font-weight: bold;
+    text-align: center;
+    color: White;
+    background-color: #008000;
+    font-size: 10pt;
+    line-height: 22px;
+    width: 25%;
+}
+    
+.master .webLogInput
+{
+    font-weight: bold;
+    text-align: center;
+    background-color: #FFFFC0;
+    border: 0px;
+    padding: 0px;
+    font-size: 10pt;
+    line-height: 22px;
+    height: 22px;
+    width: 100%;
+}
+
+.master .selectPanel
+{
+    width: 98%;
+    text-align: left;
+    padding: 5px 0px 10px 0px;
+}
+
+.master .leftNoBorder
+{
+    width: 100%;
+    text-align: left;
+    border: 0px none;
+}
+
+.master .centerNoBorder
+{
+    width: 100%;
+    text-align: center;
+    border: 0px none;
+}
+
+.master .gridViewMain
+{
+    text-align: left; 
+    width: 100%; 
+    /*height: 450px; */
+    cursor: pointer;
+    /*padding-left: 1%;*/
+}
+
+.master .margin1percent
+{
+    margin-left: 1%; 
+}
+
+/****** ロッド先端画面 ******/
+.rodEnd .labelOther
+{
+    color: White;
+    background-color: Green;
+    text-align: left;
+}
+
+/****** オプション外画面 ******/
+
+.outOfOption .titleLabel
+{
+    background-color: Green;
+    color: White;
+    font-size: medium;
+    font-weight: bold;
+    text-align: Left;
+    padding: 3px;
+}
+
+.outOfOption .defaultLabel
+{
+    font-size: small;
+    text-align: Left;
+    border-style: none;
+    border-width: 0px;
+}
+
+.outOfOption .dropDown
+{
+    width: 100%;
+    background-color: #FFFFCC;
+    font-size: medium;
+}
+
+.outOfOption .textReadOnly
+{
+    width: 50%;
+    background-color: #FFFFCC;
+    font-size: medium;
+}
+
+.outOfOption .textBox
+{
+    font-size: medium;
+    background-color: #FFFFCC;
+}
+
+.outOfOption .dispTable
+{
+    border-style: none;
+    border-width: 0px;
+    border-collapse: collapse;
+    border-color: Black;
+    margin-top: 2px;
+    width: 100%;
+}
+
+.dispTable td
+{
+    border: 1px;
+    border-style: solid;
+    border-collapse: collapse;
+    border-color: Black;
+    padding: 0px;
+}
+
+.dispTable tr
+{
+    border: 1px;
+    border-style: solid;
+    border-collapse: collapse;
+    border-color: Black;
+    padding: 0px;
+}
+
+/****** 形番分解 ******/
+.katSep
+{
+    width: 98%; 
+    float: inherit; 
+    position: relative;
+    text-align: left;
+}
+
+.katSep .title
+{
+    font-size: medium;
+    color: Black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.katSep .textBox
+{
+    font-size: medium;
+    font-weight: bold;
+    background-color: #FFFFCC;
+    width: 450px;
+}
+
+.katSep .gridRow
+{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.katSep .gridTitle
+{
+    /*background-color: Green;*/
+    color: Black;
+    font-size: medium;
+    font-weight: bold;
+    height:100%;
+}
+
+.katSep .loadMessage
+{
+    background-color: Green;
+    border-width: 0px;
+    color: White;
+    font-size: 36px;
+    padding: 30px;
+    position: fixed;
+    left: 40%;
+    top: 20px;   
+}
+
+/****** 組合せ出力 ******/
+.katOut .options
+{
+    width: 98%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.katOut .gridHeader
+{
+    font-size: medium;
+    height: 100%;
+    line-height: 100%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+.katOut .gridItem
+{
+    height: 100%;
+    font-size: small;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/****** 100テスト ******/
+/*.100Test .textbox
+{
+    background-color: #FFFFCC;
+    border-color: Silver;
+    border-style: solid;
+    border-width: 1px;
+    font-weight:bold;
+    font-size: large;
+    margin-bottom:10px;
+    text-align: left;
+    width: 120px;
+}
+
+.100Test .label
+{
+    font-weight:bold;
+}*/
+
+/****** 価格詳細画面 ******/
+.priceDetail .gridHeader
+{
+    background-color: Green;
+    font-weight:bold;
+    line-height: 20px;
+    vertical-align: middle; 
+    width: 98%; 
+}
+
+/****** 匿名ユーザー機種選択画面 ******/
+.typeanonymous ul {
+    text-align: left;
+}
+
+
+.typeanonymous li {
+    text-align: left;
+    list-style-type: none;
+}
+
+.typenonymous .treeopen {
+    background-image: url('/KHImage/smc/ic_folder_open.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 20px;
+}
+
+.typenonymous .treeclose {
+    background-image: url('/KHImage/smc/ic_folder_close.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 20px;
+}
+
+.cantoggle {
+    font-size: small;
+}
+
+.marginleft50top10 {
+    margin-left: 50px;
+    margin-top: 10px;
+}

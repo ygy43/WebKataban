@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_TypeAnonymous" targetNamespace="http://tempuri.org/DS_TypeAnonymous.xsd" xmlns:mstns="http://tempuri.org/DS_TypeAnonymous.xsd" xmlns="http://tempuri.org/DS_TypeAnonymous.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="connkhdb" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="connkhdb (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WebKataban.My.MySettings.GlobalReference.Default.connkhdb" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="kh_series_hierarchyTableAdapter" GeneratorDataComponentClassName="kh_series_hierarchyTableAdapter" Name="kh_series_hierarchy" UserDataComponentName="kh_series_hierarchyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connkhdb (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT                      kh_series_hierarchy.id, kh_series_hierarchy.upperlevel_id, kh_series_hierarchy.name_ja, kh_series_hierarchy.name_en, 
+                                      kh_series_hierarchy.name_zh, kh_series_hierarchy.name_tw, kh_series_hierarchy.name_ko, 
+                                      kh_series_hierarchy.series_kataban, kh_series_hierarchy.key_kataban, kh_series_hierarchy.image_name, 
+                                      kh_series_hierarchy.register_person, kh_series_hierarchy.register_datetime, kh_series_hierarchy.current_person, 
+                                      kh_series_hierarchy.current_datetime, kh_series_kataban.in_effective_date, kh_series_kataban.out_effective_date, 
+                                      kh_series_hierarchy.display_order
+FROM                         kh_series_hierarchy LEFT OUTER JOIN
+                                      kh_series_kataban ON kh_series_hierarchy.series_kataban = kh_series_kataban.series_kataban AND 
+                                      kh_series_hierarchy.key_kataban = kh_series_kataban.key_kataban</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="upperlevel_id" DataSetColumn="upperlevel_id" />
+              <Mapping SourceColumn="name_ja" DataSetColumn="name_ja" />
+              <Mapping SourceColumn="name_en" DataSetColumn="name_en" />
+              <Mapping SourceColumn="name_zh" DataSetColumn="name_zh" />
+              <Mapping SourceColumn="name_tw" DataSetColumn="name_tw" />
+              <Mapping SourceColumn="name_ko" DataSetColumn="name_ko" />
+              <Mapping SourceColumn="series_kataban" DataSetColumn="series_kataban" />
+              <Mapping SourceColumn="key_kataban" DataSetColumn="key_kataban" />
+              <Mapping SourceColumn="register_person" DataSetColumn="register_person" />
+              <Mapping SourceColumn="register_datetime" DataSetColumn="register_datetime" />
+              <Mapping SourceColumn="current_person" DataSetColumn="current_person" />
+              <Mapping SourceColumn="current_datetime" DataSetColumn="current_datetime" />
+              <Mapping SourceColumn="image_name" DataSetColumn="image_name" />
+              <Mapping SourceColumn="in_effective_date" DataSetColumn="in_effective_date" />
+              <Mapping SourceColumn="out_effective_date" DataSetColumn="out_effective_date" />
+              <Mapping SourceColumn="display_order" DataSetColumn="display_order" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="connkhdb (MySettings)" DbObjectName="khdbCad.sales.kh_series_hierarchy" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillById" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataById" GeneratorSourceName="FillById" GetMethodModifier="Public" GetMethodName="GetDataById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataById" UserSourceName="FillById">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT                      id, upperlevel_id, name_ja, name_en, name_zh, name_tw, name_ko, series_kataban, key_kataban, register_person, 
+                                      register_datetime, current_person, current_datetime, image_name, display_order
+FROM                         kh_series_hierarchy
+WHERE                       (id = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="id" DataSourceName="khdbCad.sales.kh_series_hierarchy" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="connkhdb (MySettings)" DbObjectName="khdbCad.sales.kh_series_hierarchy" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByUpperlevelId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUpperlevelId" GeneratorSourceName="FillByUpperlevelId" GetMethodModifier="Public" GetMethodName="GetDataByUpperlevelId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUpperlevelId" UserSourceName="FillByUpperlevelId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT                      id, upperlevel_id, name_ja, name_en, name_zh, name_tw, name_ko, series_kataban, key_kataban, register_person, 
+                                      register_datetime, current_person, current_datetime, image_name, display_order
+FROM                         kh_series_hierarchy
+WHERE                       (upperlevel_id = @upperlevelId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="upperlevelId" ColumnName="upperlevel_id" DataSourceName="khdbCad.sales.kh_series_hierarchy" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@upperlevelId" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="upperlevel_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="kh_series_nm_mstTableAdapter" GeneratorDataComponentClassName="kh_series_nm_mstTableAdapter" Name="kh_series_nm_mst" UserDataComponentName="kh_series_nm_mstTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="connkhdb (MySettings)" DbObjectName="khdbCad.sales.kh_series_nm_mst" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [kh_series_nm_mst] WHERE (([language_cd] = @Original_language_cd) AND ([series_kataban] = @Original_series_kataban) AND ([key_kataban] = @Original_key_kataban) AND ([in_effective_date] = @Original_in_effective_date))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_language_cd" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="language_cd" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_series_kataban" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="series_kataban" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_key_kataban" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="key_kataban" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_in_effective_date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="in_effective_date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [kh_series_nm_mst] ([language_cd], [series_kataban], [key_kataban], [in_effective_date], [out_effective_date], [series_nm], [disp_kataban], [register_person], [register_datetime], [current_person], [current_datetime]) VALUES (@language_cd, @series_kataban, @key_kataban, @in_effective_date, @out_effective_date, @series_nm, @disp_kataban, @register_person, @register_datetime, @current_person, @current_datetime)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@language_cd" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="language_cd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@series_kataban" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="series_kataban" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@key_kataban" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="key_kataban" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@in_effective_date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="in_effective_date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@out_effective_date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="out_effective_date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@series_nm" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="series_nm" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@disp_kataban" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="disp_kataban" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@register_person" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="register_person" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@register_datetime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="register_datetime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@current_person" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="current_person" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@current_datetime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="current_datetime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT                      kh_series_nm_mst.*
+FROM                         kh_series_nm_mst</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [kh_series_nm_mst] SET [language_cd] = @language_cd, [series_kataban] = @series_kataban, [key_kataban] = @key_kataban, [in_effective_date] = @in_effective_date, [out_effective_date] = @out_effective_date, [series_nm] = @series_nm, [disp_kataban] = @disp_kataban, [register_person] = @register_person, [register_datetime] = @register_datetime, [current_person] = @current_person, [current_datetime] = @current_datetime WHERE (([language_cd] = @Original_language_cd) AND ([series_kataban] = @Original_series_kataban) AND ([key_kataban] = @Original_key_kataban) AND ([in_effective_date] = @Original_in_effective_date))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@language_cd" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="language_cd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@series_kataban" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="series_kataban" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@key_kataban" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="key_kataban" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@in_effective_date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="in_effective_date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@out_effective_date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="out_effective_date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@series_nm" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="series_nm" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@disp_kataban" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="disp_kataban" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@register_person" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="register_person" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@register_datetime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="register_datetime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@current_person" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="current_person" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@current_datetime" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="current_datetime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_language_cd" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="language_cd" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_series_kataban" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="series_kataban" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_key_kataban" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="key_kataban" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_in_effective_date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="in_effective_date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="language_cd" DataSetColumn="language_cd" />
+              <Mapping SourceColumn="series_kataban" DataSetColumn="series_kataban" />
+              <Mapping SourceColumn="key_kataban" DataSetColumn="key_kataban" />
+              <Mapping SourceColumn="in_effective_date" DataSetColumn="in_effective_date" />
+              <Mapping SourceColumn="out_effective_date" DataSetColumn="out_effective_date" />
+              <Mapping SourceColumn="series_nm" DataSetColumn="series_nm" />
+              <Mapping SourceColumn="disp_kataban" DataSetColumn="disp_kataban" />
+              <Mapping SourceColumn="register_person" DataSetColumn="register_person" />
+              <Mapping SourceColumn="register_datetime" DataSetColumn="register_datetime" />
+              <Mapping SourceColumn="current_person" DataSetColumn="current_person" />
+              <Mapping SourceColumn="current_datetime" DataSetColumn="current_datetime" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="connkhdb (MySettings)" DbObjectName="khdbCad.sales.kh_series_nm_mst" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByKeys" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByKeys" GeneratorSourceName="FillByKeys" GetMethodModifier="Public" GetMethodName="GetDataByKeys" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByKeys" UserSourceName="FillByKeys">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT                      language_cd, series_kataban, key_kataban, in_effective_date, out_effective_date, series_nm, disp_kataban, 
+                                      register_person, register_datetime, current_person, current_datetime
+FROM                         kh_series_nm_mst
+WHERE                       (language_cd = @language) AND (series_kataban = @seriesKataban) AND (key_kataban = @keyKataban) AND 
+                                      (in_effective_date &lt;= @currentDate) AND (out_effective_date &gt; @currentDate)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="language" ColumnName="language_cd" DataSourceName="khdbCad.sales.kh_series_nm_mst" DataTypeServer="char(2)" DbType="AnsiString" Direction="Input" ParameterName="@language" Precision="0" ProviderType="Char" Scale="0" Size="2" SourceColumn="language_cd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="seriesKataban" ColumnName="series_kataban" DataSourceName="khdbCad.sales.kh_series_nm_mst" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@seriesKataban" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="series_kataban" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="keyKataban" ColumnName="key_kataban" DataSourceName="khdbCad.sales.kh_series_nm_mst" DataTypeServer="varchar(2)" DbType="AnsiString" Direction="Input" ParameterName="@keyKataban" Precision="0" ProviderType="VarChar" Scale="0" Size="2" SourceColumn="key_kataban" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="currentDate" ColumnName="in_effective_date" DataSourceName="khdbCad.sales.kh_series_nm_mst" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@currentDate" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="in_effective_date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_TypeAnonymous" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_TypeAnonymous" msprop:Generator_UserDSName="DS_TypeAnonymous">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="kh_series_hierarchy" msprop:Generator_TableClassName="kh_series_hierarchyDataTable" msprop:Generator_TableVarName="tablekh_series_hierarchy" msprop:Generator_TablePropName="kh_series_hierarchy" msprop:Generator_RowDeletingName="kh_series_hierarchyRowDeleting" msprop:Generator_RowChangingName="kh_series_hierarchyRowChanging" msprop:Generator_RowEvHandlerName="kh_series_hierarchyRowChangeEventHandler" msprop:Generator_RowDeletedName="kh_series_hierarchyRowDeleted" msprop:Generator_UserTableName="kh_series_hierarchy" msprop:Generator_RowChangedName="kh_series_hierarchyRowChanged" msprop:Generator_RowEvArgName="kh_series_hierarchyRowChangeEvent" msprop:Generator_RowClassName="kh_series_hierarchyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="upperlevel_id" msprop:Generator_ColumnVarNameInTable="columnupperlevel_id" msprop:Generator_ColumnPropNameInRow="upperlevel_id" msprop:Generator_ColumnPropNameInTable="upperlevel_idColumn" msprop:Generator_UserColumnName="upperlevel_id" type="xs:int" />
+              <xs:element name="name_ja" msprop:Generator_ColumnVarNameInTable="columnname_ja" msprop:Generator_ColumnPropNameInRow="name_ja" msprop:Generator_ColumnPropNameInTable="name_jaColumn" msprop:Generator_UserColumnName="name_ja">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_en" msprop:Generator_ColumnVarNameInTable="columnname_en" msprop:Generator_ColumnPropNameInRow="name_en" msprop:Generator_ColumnPropNameInTable="name_enColumn" msprop:Generator_UserColumnName="name_en" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_zh" msprop:Generator_ColumnVarNameInTable="columnname_zh" msprop:Generator_ColumnPropNameInRow="name_zh" msprop:Generator_ColumnPropNameInTable="name_zhColumn" msprop:Generator_UserColumnName="name_zh" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_tw" msprop:Generator_ColumnVarNameInTable="columnname_tw" msprop:Generator_ColumnPropNameInRow="name_tw" msprop:Generator_ColumnPropNameInTable="name_twColumn" msprop:Generator_UserColumnName="name_tw" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_ko" msprop:Generator_ColumnVarNameInTable="columnname_ko" msprop:Generator_ColumnPropNameInRow="name_ko" msprop:Generator_ColumnPropNameInTable="name_koColumn" msprop:Generator_UserColumnName="name_ko" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="series_kataban" msprop:Generator_ColumnVarNameInTable="columnseries_kataban" msprop:Generator_ColumnPropNameInRow="series_kataban" msprop:Generator_ColumnPropNameInTable="series_katabanColumn" msprop:Generator_UserColumnName="series_kataban" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="key_kataban" msprop:Generator_ColumnVarNameInTable="columnkey_kataban" msprop:Generator_ColumnPropNameInRow="key_kataban" msprop:Generator_ColumnPropNameInTable="key_katabanColumn" msprop:Generator_UserColumnName="key_kataban" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="register_person" msprop:Generator_ColumnVarNameInTable="columnregister_person" msprop:Generator_ColumnPropNameInRow="register_person" msprop:Generator_ColumnPropNameInTable="register_personColumn" msprop:Generator_UserColumnName="register_person">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="register_datetime" msprop:Generator_ColumnVarNameInTable="columnregister_datetime" msprop:Generator_ColumnPropNameInRow="register_datetime" msprop:Generator_ColumnPropNameInTable="register_datetimeColumn" msprop:Generator_UserColumnName="register_datetime" type="xs:dateTime" />
+              <xs:element name="current_person" msprop:Generator_ColumnVarNameInTable="columncurrent_person" msprop:Generator_ColumnPropNameInRow="current_person" msprop:Generator_ColumnPropNameInTable="current_personColumn" msprop:Generator_UserColumnName="current_person" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="current_datetime" msprop:Generator_ColumnVarNameInTable="columncurrent_datetime" msprop:Generator_ColumnPropNameInRow="current_datetime" msprop:Generator_ColumnPropNameInTable="current_datetimeColumn" msprop:Generator_UserColumnName="current_datetime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="image_name" msprop:Generator_ColumnVarNameInTable="columnimage_name" msprop:Generator_ColumnPropNameInRow="image_name" msprop:Generator_ColumnPropNameInTable="image_nameColumn" msprop:Generator_UserColumnName="image_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="in_effective_date" msprop:Generator_ColumnVarNameInTable="columnin_effective_date" msprop:Generator_ColumnPropNameInRow="in_effective_date" msprop:Generator_ColumnPropNameInTable="in_effective_dateColumn" msprop:Generator_UserColumnName="in_effective_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="out_effective_date" msprop:Generator_ColumnVarNameInTable="columnout_effective_date" msprop:Generator_ColumnPropNameInRow="out_effective_date" msprop:Generator_ColumnPropNameInTable="out_effective_dateColumn" msprop:Generator_UserColumnName="out_effective_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="display_order" msprop:Generator_ColumnVarNameInTable="columndisplay_order" msprop:Generator_ColumnPropNameInRow="display_order" msprop:Generator_ColumnPropNameInTable="display_orderColumn" msprop:Generator_UserColumnName="display_order" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="kh_series_nm_mst" msprop:Generator_TableClassName="kh_series_nm_mstDataTable" msprop:Generator_TableVarName="tablekh_series_nm_mst" msprop:Generator_TablePropName="kh_series_nm_mst" msprop:Generator_RowDeletingName="kh_series_nm_mstRowDeleting" msprop:Generator_RowChangingName="kh_series_nm_mstRowChanging" msprop:Generator_RowEvHandlerName="kh_series_nm_mstRowChangeEventHandler" msprop:Generator_RowDeletedName="kh_series_nm_mstRowDeleted" msprop:Generator_UserTableName="kh_series_nm_mst" msprop:Generator_RowChangedName="kh_series_nm_mstRowChanged" msprop:Generator_RowEvArgName="kh_series_nm_mstRowChangeEvent" msprop:Generator_RowClassName="kh_series_nm_mstRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="language_cd" msprop:Generator_ColumnVarNameInTable="columnlanguage_cd" msprop:Generator_ColumnPropNameInRow="language_cd" msprop:Generator_ColumnPropNameInTable="language_cdColumn" msprop:Generator_UserColumnName="language_cd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="series_kataban" msprop:Generator_ColumnVarNameInTable="columnseries_kataban" msprop:Generator_ColumnPropNameInRow="series_kataban" msprop:Generator_ColumnPropNameInTable="series_katabanColumn" msprop:Generator_UserColumnName="series_kataban">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="key_kataban" msprop:Generator_ColumnVarNameInTable="columnkey_kataban" msprop:Generator_ColumnPropNameInRow="key_kataban" msprop:Generator_ColumnPropNameInTable="key_katabanColumn" msprop:Generator_UserColumnName="key_kataban">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="in_effective_date" msprop:Generator_ColumnVarNameInTable="columnin_effective_date" msprop:Generator_ColumnPropNameInRow="in_effective_date" msprop:Generator_ColumnPropNameInTable="in_effective_dateColumn" msprop:Generator_UserColumnName="in_effective_date" type="xs:dateTime" />
+              <xs:element name="out_effective_date" msprop:Generator_ColumnVarNameInTable="columnout_effective_date" msprop:Generator_ColumnPropNameInRow="out_effective_date" msprop:Generator_ColumnPropNameInTable="out_effective_dateColumn" msprop:Generator_UserColumnName="out_effective_date" type="xs:dateTime" />
+              <xs:element name="series_nm" msprop:Generator_ColumnVarNameInTable="columnseries_nm" msprop:Generator_ColumnPropNameInRow="series_nm" msprop:Generator_ColumnPropNameInTable="series_nmColumn" msprop:Generator_UserColumnName="series_nm">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="disp_kataban" msprop:Generator_ColumnVarNameInTable="columndisp_kataban" msprop:Generator_ColumnPropNameInRow="disp_kataban" msprop:Generator_ColumnPropNameInTable="disp_katabanColumn" msprop:Generator_UserColumnName="disp_kataban">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="register_person" msprop:Generator_ColumnVarNameInTable="columnregister_person" msprop:Generator_ColumnPropNameInRow="register_person" msprop:Generator_ColumnPropNameInTable="register_personColumn" msprop:Generator_UserColumnName="register_person">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="register_datetime" msprop:Generator_ColumnVarNameInTable="columnregister_datetime" msprop:Generator_ColumnPropNameInRow="register_datetime" msprop:Generator_ColumnPropNameInTable="register_datetimeColumn" msprop:Generator_UserColumnName="register_datetime" type="xs:dateTime" />
+              <xs:element name="current_person" msprop:Generator_ColumnVarNameInTable="columncurrent_person" msprop:Generator_ColumnPropNameInRow="current_person" msprop:Generator_ColumnPropNameInTable="current_personColumn" msprop:Generator_UserColumnName="current_person" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="current_datetime" msprop:Generator_ColumnVarNameInTable="columncurrent_datetime" msprop:Generator_ColumnPropNameInRow="current_datetime" msprop:Generator_ColumnPropNameInTable="current_datetimeColumn" msprop:Generator_UserColumnName="current_datetime" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:kh_series_hierarchy" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="kh_series_nm_mst_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:kh_series_nm_mst" />
+      <xs:field xpath="mstns:language_cd" />
+      <xs:field xpath="mstns:series_kataban" />
+      <xs:field xpath="mstns:key_kataban" />
+      <xs:field xpath="mstns:in_effective_date" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

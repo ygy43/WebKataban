@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://sv413/WcfKatahikiRenkei/KatahikiRenkeiService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfKatahikiRenkei.Results" />
+  <xs:element name="GetStandardNoki">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strKata" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPlaceId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStandardNokiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfKatahikiRenkei.Results" minOccurs="0" name="GetStandardNokiResult" nillable="true" type="q1:StandardNouki" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetElKubun">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetElKubunResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetElKubunResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetElFlag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetElFlagResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetElFlagResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuantityUnit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLanguage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLanguageDefault" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuantityUnitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfKatahikiRenkei.Results" minOccurs="0" name="GetQuantityUnitResult" nillable="true" type="q2:QuantityUnit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNetPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strImportCountryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strExportCountryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="decGsPrice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="strBaseCurrency" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNetPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNetPriceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSwitchFlg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSwitchFlgResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSwitchFlgResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSelectCatalog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSelectCatalogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfKatahikiRenkei.Results" minOccurs="0" name="GetSelectCatalogResult" nillable="true" type="q3:SelectCatalog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsGlc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strKataban" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsGlcResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsGlcResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMItemByLanguage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLanguage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strKisyuCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMItemByLanguageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfKatahikiRenkei.Results" minOccurs="0" name="GetMItemByLanguageResult" nillable="true" type="q4:MItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

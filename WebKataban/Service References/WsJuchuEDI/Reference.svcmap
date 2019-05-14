@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="89769dbb-ef07-4dff-885d-1fd54f168d3e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceDBIO.xsd" MetadataType="Schema" ID="abb29d50-a76f-4111-a7bb-fdcdc46d1dd9" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceDBIO1.xsd" MetadataType="Schema" ID="b61d6502-0b06-4d78-b0cb-74282736da9d" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceDBIO2.xsd" MetadataType="Schema" ID="fa5ae1fb-9fc5-4066-b012-01caa08558a9" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd2" />
+    <MetadataFile FileName="DSMItem.xsd" MetadataType="Schema" ID="4cfee706-9137-4719-ac5c-359b11ed15d5" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd3" />
+    <MetadataFile FileName="DSMSPPrice.xsd" MetadataType="Schema" ID="29c9c767-1133-42f5-b705-693ae29a4f97" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd4" />
+    <MetadataFile FileName="DSMOrderItem.xsd" MetadataType="Schema" ID="9af6917c-7a3c-4ed4-9d12-10b81613404c" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd5" />
+    <MetadataFile FileName="DSMDeptDenno.xsd" MetadataType="Schema" ID="565f1588-4ce4-4c7e-8902-925ca6b25065" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd6" />
+    <MetadataFile FileName="DSMEndUserCnv.xsd" MetadataType="Schema" ID="24df5b17-2694-4787-8935-70b97a1d5168" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd7" />
+    <MetadataFile FileName="DSTSenko.xsd" MetadataType="Schema" ID="75797c49-aebe-4b7f-8239-0f603ebe4972" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd23" />
+    <MetadataFile FileName="ServiceDBIO3.xsd" MetadataType="Schema" ID="f6d19bbd-d7ac-47ac-9d05-cb0015264547" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd16" />
+    <MetadataFile FileName="DSTChumon.xsd" MetadataType="Schema" ID="d3421db7-0bad-4ece-995b-365332bfd8ac" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd14" />
+    <MetadataFile FileName="DSMMKisyu.xsd" MetadataType="Schema" ID="9c2cd142-2596-4314-abe8-2e462f89c983" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd10" />
+    <MetadataFile FileName="ServiceDBIO.wsdl" MetadataType="Wsdl" ID="c557a68c-51a4-49b9-84d5-6f12817499d8" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?wsdl" />
+    <MetadataFile FileName="DSMKensakuJoken.xsd" MetadataType="Schema" ID="4290038c-61a4-4956-9f3a-b9cab925754f" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd18" />
+    <MetadataFile FileName="DSTKikan.xsd" MetadataType="Schema" ID="97e88206-5c3c-49c6-b743-dcc7bf9b35af" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd17" />
+    <MetadataFile FileName="DSTJuchuRirekiList.xsd" MetadataType="Schema" ID="b7ca84b8-d7b9-4cc5-bf0d-a53ecdccddbd" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd20" />
+    <MetadataFile FileName="DSMKATAHIKI.xsd" MetadataType="Schema" ID="320122ee-e7b6-41a9-b48f-9a0d50703758" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd19" />
+    <MetadataFile FileName="DSTJuchu.xsd" MetadataType="Schema" ID="97b43d5b-bddd-4fdb-99c2-7bc6d236a1b6" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd15" />
+    <MetadataFile FileName="DSMSystem.xsd" MetadataType="Schema" ID="0f5ace03-dca5-40e4-a8e1-bca6ef1f905d" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd11" />
+    <MetadataFile FileName="ServiceDBIO4.xsd" MetadataType="Schema" ID="18413c5e-0460-4233-99a1-ec160f0baf58" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd21" />
+    <MetadataFile FileName="DSTBatchLog.xsd" MetadataType="Schema" ID="aa66a549-345b-4124-8f35-5b191c4771ab" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd13" />
+    <MetadataFile FileName="DSMNijiSyosyaCnv.xsd" MetadataType="Schema" ID="e89135f8-dd52-42b4-a150-8227e9c18527" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd8" />
+    <MetadataFile FileName="DSMTokuisakiCnv.xsd" MetadataType="Schema" ID="a49d0e87-3b4f-4c1b-824e-0b1acdc7dbb4" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd9" />
+    <MetadataFile FileName="DSMTansyuku.xsd" MetadataType="Schema" ID="b510a89c-100d-4d3c-a842-e1dba0a4615f" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd12" />
+    <MetadataFile FileName="DstChumonCnt.xsd" MetadataType="Schema" ID="a6c46a55-c621-4966-aa28-aea3bafc9d30" SourceId="1" SourceUrl="http://sv453/juchuedi_wsdbio/ServiceDBIO.svc?xsd=xsd22" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
