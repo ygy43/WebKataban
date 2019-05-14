@@ -19,6 +19,7 @@ Public Class _Default
         strPassword = UrlEncode(Request.QueryString("B"))
         strMacAddress = UrlEncode(Request.QueryString("C"))
         strSerialNo = UrlEncode(Request.QueryString("D"))
+
         strEdiKey = UrlEncode(Request.QueryString("E"))
 
         'URL取得
